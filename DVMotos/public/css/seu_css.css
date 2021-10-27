@@ -1,0 +1,45 @@
+body {
+    font-family: "Arial Rounded MT Bold";
+    background-color: whitesmoke;
+}
+
+.carousel.slide {
+    box-shadow: rgba(0, 0, 0, 0.247) 0px 25px 20px -20px;
+    margin-bottom: 50px;
+}
+
+.btn.btn-warning {
+    background-color: #FFCE07 !important;
+    border-color: #FFCE07 !important;
+    color: white !important;
+}
+
+.btn.btn-warning:hover {
+    background-color: #FFCE07 !important;
+    border-color: #FFCE07 !important;
+    color: #070607 !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.row.justify-content-between {
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFCE07 !important;
+}
+
+.card-title {
+    font-weight: 800;
+}
+
+.card-body {
+    text-align: center;
+}
+
+#botao-produtos {
+    margin: 20px;
+}
