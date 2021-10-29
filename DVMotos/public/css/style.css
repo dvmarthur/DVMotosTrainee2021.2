@@ -1,0 +1,71 @@
+/* Elementos */
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Arial Rounded MT Bold';
+    background-color: #F5F5F5;
+}
+
+/* Classes */
+
+.navegacao {
+    height: 40px;
+    background-color: #070607;
+    color: #FFCE07;
+}
+
+.navegacao ul {
+    list-style: none;
+    margin-top: 0px;
+    padding-left: 0px;
+    text-align: right;
+    height: 40px;
+}
+
+.navegacao li {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.navegacao a {
+    color: #FFCE07;
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 60px 130px 20px 60px;
+}
+
+.apresentacao p {
+    text-align: justify;
+    font-size: 17px;
+}
+
+.img-marca {
+    float: left;
+    border-radius: 20px;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.quem-somos {
+    padding-left: 60px;
+    padding-bottom: 90px;
+    padding-right: 60px;
+}
+
+.quem-somos h2 {
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.quem-somos p {
+    text-align: justify;
+}
