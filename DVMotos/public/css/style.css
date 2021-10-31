@@ -12,6 +12,8 @@ body {
 
 /* Classes */
 
+/*Quem Somos */
+
 .navegacao {
     height: 40px;
     background-color: #070607;
@@ -48,21 +50,35 @@ body {
     font-size: 17px;
 }
 
+.caminho {
+    list-style: none;
+    padding: 0;
+}
+
+.caminho li {
+    display: inline-block;
+}
+
+.caminho ul {
+    padding-left: 60px;
+}
+
 .img-marca {
     float: left;
-    border-radius: 20px;
+    border-radius: 25px;
     width: 300px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .quem-somos {
     padding-left: 60px;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
     padding-right: 60px;
 }
 
 .quem-somos h2 {
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 20px;
 }
 
