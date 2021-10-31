@@ -16,8 +16,6 @@ body {
 
 .navegacao {
     height: 40px;
-    background-color: #070607;
-    color: #FFCE07;
 }
 
 .navegacao ul {
@@ -34,11 +32,6 @@ body {
     padding-right: 30px;
     line-height: 40px;
     font-size: 18px;
-}
-
-.navegacao a {
-    color: #FFCE07;
-    text-decoration: none;
 }
 
 .apresentacao {
