@@ -1,0 +1,25 @@
+body {
+    margin-left: 400px;
+    margin-right: 400px;
+    background-color: whitesmoke;
+    font-family: "Arial Rounded MT Bold";
+    text-align: left;
+}
+
+iframe{
+    margin-bottom: 50px;
+}
+
+.form-floating {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mapa h1{
+      margin-bottom: 25px;
+      margin-top: 50px;
+}
+
+.instrucoes p{
+    font-size: 24px;
+}
