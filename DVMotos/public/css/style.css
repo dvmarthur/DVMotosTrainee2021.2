@@ -6,8 +6,13 @@ html, body {
 }
 
 body {
-    font-family: 'Arial Rounded MT Bold';
-    background-color: #F5F5F5;
+    font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
+}
+
+/* TAGs */
+
+hr {
+    border-color: #FF0000;
 }
 
 /* Classes */
@@ -34,32 +39,30 @@ body {
     font-size: 18px;
 }
 
+.navegacao a {
+    text-decoration: none;
+    color: #070607;
+}
+
 .apresentacao {
     padding: 60px 130px 20px 60px;
+    background-color: #070607;
+}
+
+.apresentacao h2 {
+    color: #FFD700;
 }
 
 .apresentacao p {
     text-align: justify;
     font-size: 17px;
-}
-
-.caminho {
-    list-style: none;
-    padding: 0;
-}
-
-.caminho li {
-    display: inline-block;
-}
-
-.caminho ul {
-    padding-left: 60px;
+    color: #FFFFFF;
 }
 
 .img-marca {
     float: left;
     border-radius: 25px;
-    width: 300px;
+    width: 350px;
     margin-right: 20px;
     margin-bottom: 10px;
 }
@@ -73,8 +76,14 @@ body {
 .quem-somos h2 {
     margin-top: 30px;
     font-size: 20px;
+    color: #FFD700;
 }
 
 .quem-somos p {
     text-align: justify;
+    color: #FFFFFF;
+}
+
+.main {
+    background-color: #070607;
 }
