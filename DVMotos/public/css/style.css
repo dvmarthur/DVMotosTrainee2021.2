@@ -87,3 +87,26 @@ hr {
 .main {
     background-color: #070607;
 }
+
+.miniatura {
+    padding: 215px;
+    padding-bottom: 100px;
+    background-color: #070607;
+}
+
+.card {
+    background-color: #FFD700;
+    color: #070607;
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.logout {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-left: 525px;
+    padding-right: 520px;
+    background-color: #070607;
+    cursor: pointer;
+}
