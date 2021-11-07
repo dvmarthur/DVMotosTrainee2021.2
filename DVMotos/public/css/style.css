@@ -88,6 +88,8 @@ hr {
     background-color: #070607;
 }
 
+/* Dashboad Administrativa */
+
 .miniatura {
     padding: 215px;
     padding-bottom: 100px;
@@ -103,10 +105,9 @@ hr {
 }
 
 .logout {
+    background-color: #070607;
     padding-top: 50px;
     padding-bottom: 100px;
     padding-left: 525px;
     padding-right: 520px;
-    background-color: #070607;
-    cursor: pointer;
 }
