@@ -104,10 +104,12 @@ hr {
     margin-bottom: 16px;
 }
 
-.logout {
-    background-color: #070607;
-    padding-top: 50px;
-    padding-bottom: 100px;
-    padding-left: 525px;
-    padding-right: 520px;
+@media (max-widht: 500px) {
+    .navegacao li {
+        display: none;
+    }
+
+    .navegacao li.threeline-icon {
+        display: inline-block;
+    }
 }
