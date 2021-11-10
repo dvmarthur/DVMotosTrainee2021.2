@@ -1,0 +1,81 @@
+body {
+    background-color: #070607;
+    font-family: "Arial Rounded MT Bold";
+    color:white;
+}
+
+.colunaEsquerda{
+    
+}
+
+.colunaEsquerda img{
+    width: 90%;
+}
+
+.colunaEsquerda h1{
+    font-size: 130%;
+    margin-top: 2%;
+}
+
+.foto1{
+    margin-top: 5%;
+}
+
+.foto2{
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.colunaDireita{
+    text-align: left;
+}
+
+.colunaDireita h1{
+    margin-top: 15%;
+    font-size: 300%;
+    margin-left: 6%;
+}
+
+.colunaDireita h2{
+    font-size: 150%;
+    margin-top: 15%;
+    margin-left: 8%;
+}
+
+.colunaDireita h3{
+    font-size: 350%;
+    text-align: center !important;
+}
+
+.colunaDireita h4{
+    margin-top: 15%;
+    margin-left: 8%;
+}
+
+.colunaDireita h5{
+    margin-top: 15%;
+    margin-left: 8%;
+    font-size: 150%;
+}
+
+.colunaDireita p{
+    margin-left: 8%;
+    font-size: 110%;
+}
+
+.Opcoes {
+    margin-left: 8%;
+}
+
+.form-check-label {
+    font-size: 20px;
+}
+
+.btn-warning {
+    background-color: #FFCE07;
+    color: black;
+    width: 500px;
+    line-height: 50px;
+    font-size: large;
+    margin-top:50px;
+}
