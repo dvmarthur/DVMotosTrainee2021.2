@@ -1,6 +1,6 @@
 body {
     background-color: #070607;
-    font-family: "Arial Rounded MT Bold";
+    font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
     color:white;
 }
 
