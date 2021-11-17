@@ -7,10 +7,12 @@ html, body {
 
 body {
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
+    background-color: #070607;
 }
 
 /* TAGs */
 
+/* Quem Somos */
 hr {
     border-color: #FF0000;
 }
@@ -37,11 +39,6 @@ hr {
     padding-right: 30px;
     line-height: 40px;
     font-size: 18px;
-}
-
-.navegacao a {
-    text-decoration: none;
-    color: #070607;
 }
 
 .apresentacao {
