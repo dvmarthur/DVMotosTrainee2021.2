@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>ADM Produtos | DVMotos Store</title>
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+      <link rel="stylesheet" href="/public/css/css_adm_produtos.css">
+  </head>
+  <body>
+
+    <!-- navbar -->
+
+    <!-- corpo da página -->
+
+        <!-- título e busca -->
+        <section class="header-main border-bottom titulo-busca">
+            <div class="container-fluid">
+                <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+                    <div class="col-md-3">
+                        <h1>Produtos</h1>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Digite o nome do produto"> <i class="bx bx-search"></i> </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- fim do título e busca -->
+
+        <!-- tabela de produtos -->
+        <section class="tabela">
+            <div class="container-fluid">
+                <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <table class="table table-hover">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Nome</th>  
+                                <th scope="col">Visualizar</th>
+                                <th scope="col">Editar</th>
+                                <th scope="col">Deletar</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Nome do Produto</th>
+                                <td><button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#modalVisualizar">Visualizar</button></td>
+                                <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modalEditar">Editar</button></td>
+                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Nome do Produto</th>
+                                <td><button type="button" class="btn btn-outline-warning">Visualizar</button></td>
+                                <td><button type="button" class="btn btn-outline-success">Editar</button></td>
+                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Nome do Produto</th>
+                                <td><button type="button" class="btn btn-outline-warning">Visualizar</button></td>
+                                <td><button type="button" class="btn btn-outline-success">Editar</button></td>
+                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Nome do Produto</th>
+                                <td><button type="button" class="btn btn-outline-warning">Visualizar</button></td>
+                                <td><button type="button" class="btn btn-outline-success">Editar</button></td>
+                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+            </div>
+        </section>
+        <!-- fim da tabela de produtos -->
+
+        <!-- Adicionar produtos e paginação -->
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-2"></div>
+                <div class="col-md-4"><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modalAdicionar">Adicionar Produto</button></div>
+                <div class="col-md-4">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Anterior</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Próxima</span>
+                            </a>
+                          </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+
+        <!-- Modal Visualizar -->
+        <div class="modal fade" id="modalVisualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Nome do Produto</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6"><img src="/public/img/img_card.jpg" class="img-fluid rounded float-left" alt="Imagem responsiva"></div>
+                        <div class="col-md-6">
+                            <h5>Categoria: Categoria</h5>
+                            <h5>Preço: R$5000,00</h5>
+                            <h5>Descrição:</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- Modal Editar -->
+        <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!--Form Modal Editar-->
+                    <div class = "formularioEditar">
+                      <input class="form-control" type="text" placeholder="Categoria">
+                      <input class="form-control" type="text" placeholder="Preço">
+                      <input class="form-control" type="text" placeholder="Descrição">
+                    </div>
+                    <!--Fim Form Modal Editar-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Adicionar -->
+        <div class="modal fade" id="modalAdicionar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- footer -->
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

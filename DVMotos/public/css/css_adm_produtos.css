@@ -1,0 +1,74 @@
+body {
+    font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
+    background-color: whitesmoke;
+}
+
+.btn.btn-warning {
+    background-color: #FFCE07 !important;
+    border-color: #FFCE07 !important;
+    color: white !important;
+}
+
+.btn.btn-warning:hover {
+    background-color: #FFCE07 !important;
+    border-color: #FFCE07 !important;
+    color: #070607 !important;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #FFCE07 !important;
+}
+
+h4 {
+    color: #070607;
+    text-transform: uppercase;
+    font-size: 14px !important;
+}
+
+a {
+    color: #FFCE07 !important;
+    font-weight: bold !important;
+}
+
+.principal {
+    background-color: whitesmoke !important;
+}
+
+.form-inputs {
+    position: relative
+}
+
+.form-inputs .form-control {
+    height: 45px
+}
+
+.form-inputs .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #000;
+}
+
+.form-inputs i {
+    position: absolute;
+    right: 10px;
+    top: 15px
+}
+
+.qty {
+    font-size: 12px
+}
+
+.page-link {
+    background-color: #070607 !important;
+    border: 1px solid whitesmoke;
+}
+
+.header-main .border-bottom .titulobusca {
+    width: 98.8% !important;
+}
+
+.formularioEditar {
+    
+}
