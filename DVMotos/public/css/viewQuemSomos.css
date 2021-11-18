@@ -31,6 +31,8 @@ hr {
     padding-left: 0px;
     text-align: right;
     height: 40px;
+    color: #FFD700;
+    
 }
 
 .navegacao li {
@@ -43,14 +45,13 @@ hr {
 
 .apresentacao {
     padding: 60px 130px 20px 60px;
-    background-color: #070607;
 }
 
-.apresentacao h2 {
+.txt-institucional h2 {
     color: #FFD700;
 }
 
-.apresentacao p {
+.txt-institucional p {
     text-align: justify;
     font-size: 17px;
     color: #FFFFFF;
@@ -81,6 +82,28 @@ hr {
     color: #FFFFFF;
 }
 
-.main {
-    background-color: #070607;
+@media (max-width: 750px) {
+
+    .img-marca {
+        width: 100%;
+    }
+
+    .picture img {
+        margin-bottom: 40px;
+        max-width: 80%;
+        width: 310px;
+    }
+
+    .txt-institucional {
+        width: 100%;
+        text-align: center;
+    }
+
+    .apresentacao h2 {
+        margin-top: 50px;
+    }
+
+    .quem-somos {
+        margin-right: 70px;
+    }
 }
