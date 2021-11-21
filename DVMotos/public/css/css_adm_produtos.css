@@ -18,16 +18,30 @@ body {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     }
 
-    .btn.btn-warning.btn-add-produto {
+    .btn.btn-warning.btn-preto {
         background-color:whitesmoke !important;
         border-color: #070607 !important;
         color: #070607 !important;
         font-weight: bold;
     }
     
-    .btn.btn-warning.btn-add-produto:hover {
+    .btn.btn-warning.btn-preto:hover {
         background-color: #070607 !important;
         border-color: #070607 !important;
+        color: whitesmoke !important;
+        font-weight: bold;
+    }
+
+    .btn.btn-warning.btn-amarelo {
+        background-color:whitesmoke !important;
+        border-color: #FFCE07 !important;
+        color: #FFCE07 !important;
+        font-weight: bold;
+    }
+    
+    .btn.btn-warning.btn-amarelo:hover {
+        background-color: #FFCE07 !important;
+        border-color: #FFCE07 !important;
         color: whitesmoke !important;
         font-weight: bold;
     }
@@ -217,4 +231,28 @@ body {
     }
     .add-product p {
         padding-top: 8px;
+    }
+
+/** Modal **/
+    .texto-modal {
+        margin-top: 2rem !important;
+    }
+
+    .texto-modal h3 {
+        color: #070607 !important;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    .texto-modal p {
+        font-size: 1.1em;
+    }
+
+    .texto-modal .row {
+        margin-bottom: 1rem;
+    }
+
+    .modal-title {
+        font-weight: bold;
+        color: #FFCE07;
     }

@@ -54,7 +54,7 @@
               <div class="row">
                   <div class="col-sm-10"></div>
                   <div class="col-sm-2 botao">
-                    <button type="button" class="btn btn-warning btn-add-produto" data-toggle="modal" data-target="#adicionarProduto">
+                    <button type="button" class="btn btn-warning btn-preto" data-toggle="modal" data-target="#adicionarProduto">
                       Adicionar produto
                     </button>
                   </div>
@@ -132,111 +132,134 @@
         </div>  
     </div> 
       
-      <!-- fim da tabela de produtos -->
+    <!-- fim da tabela de produtos -->
 
-      <!-- Adicionar produtos e paginação -->
-      
-        <!-- paginação -->
-        <nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-                <span class="sr-only">Anterior</span>
-              </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Próxima</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- fim da paginação -->
+    <!-- paginação -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Anterior</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Próxima</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- fim da paginação -->
 
 
-      <!-- Modal -->
+  <!-- Modal -->
 
-        <!-- Modal Visualizar -->
-        <div class="modal fade" id="visualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Nome do Produto</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6"><img src="/public/img/img_card.jpg" class="img-fluid rounded float-left" alt="Imagem responsiva"></div>
-                        <div class="col-md-6">
-                            <h5>Categoria: Categoria</h5>
-                            <h5>Preço: R$5000,00</h5>
-                            <h5>Descrição:</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                </div>
+    <!-- Modal Visualizar -->
+    <div class="modal fade" id="visualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">2021 Heritage Classic Harley-Davidson</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+
+              <div class="row">
+                <img src="/public/img/img_card.jpg" alt="Imagem do produto" class="w-100 rounded">
               </div>
-            </div>
-        </div>
 
-        <!-- Modal Editar -->
-        <div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
+              <div class="texto-modal">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <h3>Preço: </h3>
+                    <p>R$75.000,00</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <h3>Categoria: </h3>
+                    <p>Motocicleta</p>
+                  </div>
                 </div>
-                <div class="modal-body">
-                    <!--Form Modal Editar-->
-                    <div class = "formularioEditar">
-                      <input class="form-control" type="text" placeholder="Categoria">
-                      <br>
-                      <input class="form-control" type="text" placeholder="Preço">
-                      <br>
-                      <input class="form-control" type="text" placeholder="Descrição">
-                    </div>
-                    <!--Fim Form Modal Editar-->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
-                </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Modal Adicionar -->
-        <div class="modal fade" id="#adicionarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>Descrição: </h3>
+                  </div>
                 </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
-                </div>
-                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>A cruiser americana por excelência. Detalhes vintage impressionantes e estilo rock and roll puro. O estilo escurecido, o toque moderno e a pilotagem revigorada do modelo Heritage leva a nostalgia a um novo patamar.</p>
+                  </div>
+                </div>              
+              </div>
+
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning btn-amarelo" data-dismiss="modal" data-toggle="modal" data-target="#editarProduto">Editar</button>
+            <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Modal Editar -->
+    <div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <!--Form Modal Editar-->
+            <div class = "formularioEditar">
+              <input class="form-control" type="text" placeholder="Categoria">
+              <br>
+              <input class="form-control" type="text" placeholder="Preço">
+              <br>
+              <input class="form-control" type="text" placeholder="Descrição">
+            </div>
+            <!--Fim Form Modal Editar-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Adicionar -->
+    <div class="modal fade" id="#adicionarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- fim modal -->
 
     <!-- footer -->
 
