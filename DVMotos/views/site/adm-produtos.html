@@ -8,7 +8,14 @@
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="/public/css/css_adm_produtos.css">
+
+      <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+      </script>
   </head>
   <body>
 
@@ -16,104 +23,146 @@
 
     <!-- corpo da página -->
 
-        <!-- título e busca -->
-        <section class="header-main border-bottom titulo-busca">
-            <div class="container-fluid">
-                <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
-                    <div class="col-md-3">
-                        <h1>Produtos</h1>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Digite o nome do produto"> <i class="bx bx-search"></i> </div>
-                    </div>
-                </div>
+      <!-- breadcrumb e busca -->
+      <section class="header-main border-bottom">
+        <div class="container-fluid">
+          <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+            
+            <div class="col-md-4">
+              <nav aria-label="Breadcrumb navigation" role="navigation">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">ADM Produtos</li>
+                </ol>
+              </nav>
             </div>
-        </section>
-        <!-- fim do título e busca -->
 
-        <!-- tabela de produtos -->
-        <section class="tabela">
-            <div class="container-fluid">
-                <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-10">
-                        <table class="table table-hover">
-                            <thead class="thead-dark">
-                              <tr>
-                                <th scope="col">Nome</th>  
-                                <th scope="col">Visualizar</th>
-                                <th scope="col">Editar</th>
-                                <th scope="col">Deletar</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">Nome do Produto</th>
-                                <td><button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#modalVisualizar">Visualizar</button></td>
-                                <td><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#modalEditar">Editar</button></td>
-                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Nome do Produto</th>
-                                <td><button type="button" class="btn btn-outline-warning">Visualizar</button></td>
-                                <td><button type="button" class="btn btn-outline-success">Editar</button></td>
-                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Nome do Produto</th>
-                                <td><button type="button" class="btn btn-outline-warning">Visualizar</button></td>
-                                <td><button type="button" class="btn btn-outline-success">Editar</button></td>
-                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
-                              </tr>
-                              <tr>
-                                <th scope="row">Nome do Produto</th>
-                                <td><button type="button" class="btn btn-outline-warning">Visualizar</button></td>
-                                <td><button type="button" class="btn btn-outline-success">Editar</button></td>
-                                <td><button type="button" class="btn btn-outline-danger">Deletar</button</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                    </div>
-                    <div class="col-md-1"></div>
-                </div>
+            <div class="col-md-8">
+                <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Digite o nome do produto"> <i class="bx bx-search"></i> </div>
             </div>
-        </section>
-        <!-- fim da tabela de produtos -->
 
-        <!-- Adicionar produtos e paginação -->
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-md-2"></div>
-                <div class="col-md-4"><button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#modalAdicionar">Adicionar Produto</button></div>
-                <div class="col-md-4">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                              <span class="sr-only">Anterior</span>
-                            </a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                              <span class="sr-only">Próxima</span>
-                            </a>
-                          </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
+          </div>
         </div>
+      </section>
+      <!-- fim do breadcrumb e busca -->
 
-        <!-- Modal -->
+      <!-- tabela de produtos -->
+      <div class="container-xl">
+        <div class="table-responsive">
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                  <div class="col-sm-10"></div>
+                  <div class="col-sm-2 botao">
+                    <button type="button" class="btn btn-warning btn-add-produto" data-toggle="modal" data-target="#adicionarProduto">
+                      Adicionar produto
+                    </button>
+                  </div>
+              </div>
+            </div>
+            <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Descrição</th>
+                  <th>Preço</th>
+                  <th>Categoria</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2021 Heritage Classic Harley-Davidson</td>
+                  <td>A cruiser americana por excelência. Detalhes vintage impressionantes e estilo rock and roll puro. O estilo escurecido, o toque moderno e a pilotagem revigorada do modelo Heritage leva a nostalgia a um novo patamar.</td>
+                  <td>R$75.000,00</td>
+                  <td>Motocicleta</td>
+                  <td>
+                      <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
+                      <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                      <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Maria Anders</td>
+                  <td>Obere Str. 57</td>
+                  <td>Berlin</td>
+                  <td>Germany</td>
+                  <td>
+                      <a href="#" class="view" title="Visualizar" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                      <a href="#" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                      <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Fran Wilson</td>
+                  <td>C/ Araquil, 67</td>
+                  <td>Madrid</td>
+                  <td>Spain</td>
+                  <td>
+                      <a href="#" class="view" title="Visualizar" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                      <a href="#" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                      <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Dominique Perrier</td>
+                  <td>25, rue Lauriston</td>
+                  <td>Paris</td>
+                  <td>France</td>
+                  <td>
+                      <a href="#" class="view" title="Visualizar" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                      <a href="#" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                      <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Martin Blank</td>
+                  <td>Via Monte Bianco 34</td>
+                  <td>Turin</td>
+                  <td>Italy</td>
+                  <td>
+                      <a href="#" class="view" title="Visualizar" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                      <a href="#" class="edit" title="Editar" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                      <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  </td>
+                </tr>        
+              </tbody>
+            </table>
+          </div>
+        </div>  
+    </div> 
+      
+      <!-- fim da tabela de produtos -->
+
+      <!-- Adicionar produtos e paginação -->
+      
+        <!-- paginação -->
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Anterior</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Próxima</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- fim da paginação -->
+
+
+      <!-- Modal -->
 
         <!-- Modal Visualizar -->
-        <div class="modal fade" id="modalVisualizar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="visualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -140,11 +189,11 @@
         </div>
 
         <!-- Modal Editar -->
-        <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -153,7 +202,9 @@
                     <!--Form Modal Editar-->
                     <div class = "formularioEditar">
                       <input class="form-control" type="text" placeholder="Categoria">
+                      <br>
                       <input class="form-control" type="text" placeholder="Preço">
+                      <br>
                       <input class="form-control" type="text" placeholder="Descrição">
                     </div>
                     <!--Fim Form Modal Editar-->
@@ -167,7 +218,7 @@
         </div>
 
         <!-- Modal Adicionar -->
-        <div class="modal fade" id="modalAdicionar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="#adicionarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
