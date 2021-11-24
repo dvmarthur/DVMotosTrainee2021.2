@@ -46,10 +46,6 @@ body {
         font-weight: bold;
     }
 
-    .botao {
-        margin-bottom: 20px;
-    }
-
 /** texto **/
 
     h2 {
@@ -233,6 +229,10 @@ body {
         padding-top: 8px;
     }
 
+    .card {
+        background-color: whitesmoke;
+    }
+
 /** Modal **/
     .texto-modal {
         margin-top: 2rem !important;
@@ -256,3 +256,11 @@ body {
         font-weight: bold;
         color: #FFCE07;
     }
+
+.card-body {
+    text-align: left !important;
+}
+
+.card {
+    border: whitesmoke !important;
+}
