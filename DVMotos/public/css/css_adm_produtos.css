@@ -264,3 +264,7 @@ body {
 .card {
     border: whitesmoke !important;
 }
+
+th {
+    background-color: #070607 !important;
+}
