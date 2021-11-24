@@ -5,6 +5,7 @@ Scrum Master:
 Arthur Moreira
 
 MARIA TESTE 1
+Hugo Teste 1342
 
 GIT TUTORIAL Primeira configuração Pelo terminal entre na pasta onde irá guardar o projeto: cd /caminho/para/a/pasta, depois inicialize o git na pasta com o comando: git init
 
