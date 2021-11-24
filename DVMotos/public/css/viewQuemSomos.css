@@ -1,0 +1,109 @@
+/* Elementos */
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
+    background-color: #070607;
+}
+
+/* TAGs */
+
+/* Quem Somos */
+hr {
+    border-color: #FF0000;
+}
+
+/* Classes */
+
+/*Quem Somos */
+
+.navegacao {
+    height: 40px;
+}
+
+.navegacao ul {
+    list-style: none;
+    margin-top: 0px;
+    padding-left: 0px;
+    text-align: right;
+    height: 40px;
+    color: #FFD700;
+    
+}
+
+.navegacao li {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.apresentacao {
+    padding: 60px 130px 20px 60px;
+}
+
+.apresentacao h2 {
+    color: #FFD700;
+}
+
+.apresentacao p {
+    text-align: justify;
+    font-size: 17px;
+    color: #FFFFFF;
+}
+
+.img-marca {
+    float: left;
+    border-radius: 25px;
+    width: 350px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.quem-somos {
+    padding-left: 60px;
+    padding-bottom: 50px;
+    padding-right: 60px;
+}
+
+.quem-somos h2 {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #FFD700;
+}
+
+.quem-somos p {
+    text-align: justify;
+    color: #FFFFFF;
+}
+
+@media (max-width: 750px) {
+
+    .img-marca {
+        width: 100%;
+    }
+
+    .picture img {
+        margin-bottom: 40px;
+        max-width: 80%;
+        width: 310px;
+    }
+
+    .txt-institucional {
+        width: 100%;
+        text-align: center;
+    }
+
+    .apresentacao h2 {
+        margin-top: 50px;
+    }
+
+    .quem-somos {
+        margin-right: 70px;
+    }
+}
