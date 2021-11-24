@@ -1,0 +1,87 @@
+body{
+    font-family: arial !important;
+}
+
+
+.navbar-home{
+    background-color: black !important;
+}
+
+.bg-secondary {
+	background-image: url(./../assets/logofooter2.png);
+	background-repeat: no-repeat;
+    background-color:#070607 !important;
+    padding: 3em 0 !important;
+    padding-bottom: 40px !important;
+    border-top: 3px solid #FFCE07 !important;
+}
+
+footer h5, footer p, footer a, footer span {
+    color: #808080;
+}
+
+footer h5 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+.logo-footer{
+    padding: 0 0 50px 50px;
+    margin-top: 5pxs;
+}
+
+.list-unstyled {
+	clear: both;
+    content: "";
+    display: block;
+}
+
+.list-unstyled {
+	color: #808080;
+}
+
+footer a {
+    text-decoration: none !important;
+}
+
+footer ul {
+    padding: 0 !important;
+}
+
+.list-unstyled li {
+    margin-bottom: 10px !important;
+}
+
+.list-unstyled a {
+    transition: 0.5s;
+}
+
+.list-unstyled a:hover {
+    color: #FFCE07;
+}
+
+.list-unstyled li:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.fab {
+    margin-top: 15px !important;
+    font-size: 25px;
+    margin-right: 10px;
+    float: left;
+}
+
+.list-unstyled span {
+    margin-top: 15px !important;
+    font-size: 20px;
+    margin-right: 10px;
+    float: left;
+}
+
+
+@media (max-width: 720px){
+	
+}

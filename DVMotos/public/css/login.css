@@ -1,0 +1,96 @@
+body{
+    background-color: #070607;
+    background-image: url("./../assets/Yellow-motorcycle_1920x1080.png");
+    height: 100%;
+    background-position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: arial !important;
+}
+
+.login{
+    background-color: #070607 !important;
+    color: #808080 !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    width: 20%;
+}
+
+
+.btn.btn-warning.btn-call-to-action {
+    background-color: #070607 !important;
+    border-color: #FFCE07 !important;
+    color: #FFCE07 !important;
+    font-weight: bold;
+}
+
+.btn.btn-warning.btn-call-to-action:hover {
+    background-color: #FFCE07 !important;
+    border-color: #FFCE07 !important;
+    color: #070607 !important;
+    font-weight: bold;
+}
+
+.dropdown-divider{
+    border-top: 1px solid #808080;
+}
+
+.dropdown-divider a:hover{
+    color: white !important;
+}
+
+
+.dropdown-item{
+    color: #808080 !important;
+    background-color: #070607 !important;
+    border-radius: 15px;
+}
+
+.dropdown-item hover{
+    color: white;
+}
+
+@media (max-width: 1980px){
+    .login{
+        background-color: #070607 !important;
+        color: #808080 !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        width: 20%;
+    }
+}
+
+
+@media (max-width: 1024px){
+    .login{
+        background-color: #070607 !important;
+        color: #808080 !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 720px){
+        .login{
+            background-color: #070607 !important;
+            color: #808080 !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 15px;
+            width: 100%;
+        }
+    }
+	
