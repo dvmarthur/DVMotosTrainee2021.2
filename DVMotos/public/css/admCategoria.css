@@ -12,8 +12,8 @@ body {
 
 /* TAGs */
 
+/*Quem Somos */
 
-/* Classes */
 .navegacao {
     height: 40px;
 }
@@ -24,8 +24,7 @@ body {
     padding-left: 0px;
     text-align: right;
     height: 40px;
-    background-color: #070607;
-    color: #FFCE07;
+    background-color: #FFFFFF;
 }
 
 .navegacao li {
@@ -34,7 +33,39 @@ body {
     padding-right: 30px;
     line-height: 40px;
     font-size: 18px;
+    color: #FFD700;
 }
+
+/* Dashboad Administrativa */
+
+.logout {
+    background-color: #070607;
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.sair {
+    height: 27px;
+    width: 27px;
+}
+
+.miniatura {
+    padding: 215px;
+    padding-top: 180px;
+    padding-bottom: 90px;
+    background-color: #070607;
+}
+
+.card {
+    background-color: #FFD700;
+    color: #070607;
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 18px;
+}
+
 /* ADM Administrativa */
 
 .btn.btn-warning {
@@ -101,4 +132,27 @@ a {
 
 .header-main .border-bottom .titulobusca {
     width: 98.8% !important;
+}
+
+/* Responsividade */ 
+
+@media(max-width: 750px) {
+
+    .miniatura {
+        width: 100%;
+        padding-top: 150px;
+        padding-right: 50px;
+        padding-left: 200px;
+    }
+
+    .card {
+        display: block;
+        max-width: 80%;
+    }
+
+    .logout {
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
