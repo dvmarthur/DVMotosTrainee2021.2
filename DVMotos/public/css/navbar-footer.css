@@ -2,103 +2,86 @@ body{
     font-family: arial !important;
 }
 
+
 .navbar-home{
     background-color: black !important;
 }
 
-footer {
-	background-color:#070607;
-    padding: 3em 0;
-	padding-bottom: 40px;
-	border-top: 5px solid #FFCE07;
+.bg-secondary {
+	background-image: url(./../assets/logofooter2.png);
+	background-repeat: no-repeat;
+    background-color:#070607 !important;
+    padding: 3em 0 !important;
+    padding-bottom: 40px !important;
+    border-top: 3px solid #FFCE07 !important;
 }
 
-footer h2, footer p, footer a, footer span {
-	color: #808080;
+footer h5, footer p, footer a, footer span {
+    color: #808080;
 }
 
-footer h2 {
-	font-weight: 400;
+footer h5 {
+    font-size: 30px;
+    font-weight: 400;
 }
 
-footer a {
-	text-decoration: none;
-}
-
-footer ul {
-	padding: 0;
-}
-
-footer li {
-	list-style: none;
-}
-
-.footer-box {
-	width: 31%;
-	padding: 1%;
-	float: left;
-}
-
-footer .wrapper:after {
-	clear: both;
-	content: "";
-	display: block;
-}
-
-.company-footer {
-	width: 80%;
-}
 
 .logo-footer{
     padding: 0 0 50px 50px;
+    margin-top: 5pxs;
 }
 
-
-.footer-list li {
-	margin-bottom: 15px;
-}
-
-.footer-list a {
-	transition: 0.5s;
-}
-
-.footer-list a:hover {
-	color: #FFCE07;
-}
-
-.footer-list li:after {
+.list-unstyled {
 	clear: both;
-	content: "";
-	display: block;
+    content: "";
+    display: block;
 }
 
-.articles-footer {
-	width: 80%;
+.list-unstyled {
+	color: #808080;
 }
 
-.footer-list.footer-article-list span {
-	display: block;
-	float: none;
+footer a {
+    text-decoration: none !important;
+}
+
+footer ul {
+    padding: 0 !important;
+}
+
+.list-unstyled li {
+    margin-bottom: 10px !important;
+}
+
+.list-unstyled a {
+    transition: 0.5s;
+}
+
+.list-unstyled a:hover {
+    color: #FFCE07;
+}
+
+.list-unstyled li:after {
+    clear: both;
+    content: "";
+    display: block;
 }
 
 .fab {
-	font-size: 30px;
-	margin-right: 10px;
-	float: left;
+    margin-top: 15px !important;
+    font-size: 25px;
+    margin-right: 10px;
+    float: left;
 }
 
-.footer-list li span {
-	float: left;
-	height: 30px;
-	line-height: 30px;
+.list-unstyled span {
+    margin-top: 15px !important;
+    font-size: 20px;
+    margin-right: 10px;
+    float: left;
 }
 
-.footer-bottom {
-	border-top: 1px solid #FFCE07;
-}
 
-.footer-bottom p {
-    text-align: center;
-	font-weight: 600;
-	margin-top: 40px;
+@media (max-width: 720px){
+	
 }
