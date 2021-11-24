@@ -60,7 +60,7 @@ body {
     background-color: #070607;
 }
 
-.card {
+.cartao {
     background-color: #FFD700;
     color: #070607;
     display: inline-block;
@@ -78,7 +78,7 @@ body {
         padding-left: 200px;
     }
 
-    .card {
+    .cartao {
         display: block;
         max-width: 80%;
     }
