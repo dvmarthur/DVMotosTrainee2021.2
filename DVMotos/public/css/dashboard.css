@@ -71,11 +71,11 @@ body {
 /* Responsividade */ 
 
 @media(max-width: 750px) {
+
     .miniatura {
         width: 100%;
-        padding-top: 150px;
-        padding-right: 50px;
-        padding-left: 200px;
+        padding-right: 100px;
+        padding-left: 150px;
     }
 
     .cartao {
