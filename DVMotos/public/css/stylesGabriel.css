@@ -1,43 +1,70 @@
+/* Elementos */
+
 body {
     margin-left: 400px;
     margin-right: 400px;
     background-color: #070607;
     font-family: "Arial Rounded MT Bold";
-    text-align: center;
     color:white;
 }
 
-.form-floating {
-    color:grey;
+/* Classes */
+
+.instrucoes {
+    text-align: center;
 }
 
-iframe{
-    margin-bottom: 50px;
+.instrucoes h1 {
+    margin-top: 100px;
+    color: #FFCE07;
+}
+
+.instrucoes p {
+    font-size: 24px;
+}
+
+.entrar-contato {
+    text-align: center;
 }
 
 .form-floating {
+    color:#808080;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
-.mapa h1{
+.mapa {
+    text-align: center;
+}
+
+.mapa h1 {
       margin-bottom: 25px;
       margin-top: 120px;
+      color: #FFCE07;
 }
 
-.instrucoes p{
-    font-size: 24px;
+.local {
+    margin-bottom: 50px;
 }
 
-.instrucoes h1 {
+.telefone {
     color: #FFCE07;
-}
-
-.mapa h1{
-    color: #FFCE07;
-}
-
-.telefone{
     margin-top: 50px;
-    color: #FFCE07;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+@media(max-widht: 750px) {
+    .instrucoes {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .mapa {
+        width: 100%;
+    }
+
+    iframe {
+        max-width: 60%;
+    }
 }
