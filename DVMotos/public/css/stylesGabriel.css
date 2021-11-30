@@ -1,0 +1,71 @@
+/* Elementos */
+
+body {
+    margin-left: 250px;
+    margin-right: 250px;
+    background-color: #070607;
+    font-family: "Arial Rounded MT Bold";
+    color:white;
+}
+
+/* Classes */
+
+.instrucoes {
+    text-align: center;
+}
+
+.instrucoes h1 {
+    margin-top: 100px;
+    color: #FFCE07;
+}
+
+.instrucoes p {
+    font-size: 24px;
+}
+
+.entrar-contato {
+    text-align: center;
+}
+
+.form-floating {
+    color:#808080;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mapa {
+    text-align: center;
+}
+
+.mapa h1 {
+      margin-bottom: 25px;
+      margin-top: 120px;
+      color: #FFCE07;
+}
+
+.local {
+    margin-bottom: 50px;
+}
+
+.telefone {
+    color: #FFCE07;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+@media(max-widht: 750px) {
+    .instrucoes {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+
+    .mapa {
+        width: 100%;
+    }
+
+    iframe {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+}
