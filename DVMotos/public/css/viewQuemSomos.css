@@ -17,6 +17,11 @@ hr {
     border-color: #FF0000;
 }
 
+a {
+    text-decoration: none;
+    color: #FFD700;
+}
+
 /* Classes */
 
 /*Quem Somos */
@@ -41,11 +46,6 @@ hr {
     padding-right: 30px;
     line-height: 40px;
     font-size: 18px;
-}
-
-a {
-    text-decoration: none;
-    color: #FFD700;
 }
 
 .apresentacao {

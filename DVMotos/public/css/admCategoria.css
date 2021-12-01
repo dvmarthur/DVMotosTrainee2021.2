@@ -7,7 +7,9 @@ body {
 
 /* TAGs */
 
-/*Quem Somos */
+/* Quem Somos */
+
+/* Classes */
 
 .navegacao {
     height: 40px;
@@ -19,7 +21,8 @@ body {
     padding-left: 0px;
     text-align: right;
     height: 40px;
-    background-color: #070607;
+    color: #FFD700;
+    
 }
 
 .navegacao li {
@@ -28,7 +31,6 @@ body {
     padding-right: 30px;
     line-height: 40px;
     font-size: 18px;
-    color: #FFD700;
 }
 
 /* Dashboad Administrativa */
@@ -36,8 +38,8 @@ body {
 .logout {
     background-color: #070607;
     text-align: right;
-    padding-right: 15px;
-    padding-top: 10px;
+    padding-right: 25px;
+    padding-top: 20px;
     padding-bottom: 10px;
 }
 
@@ -49,7 +51,7 @@ body {
 .miniatura {
     padding: 215px;
     padding-top: 180px;
-    padding-bottom: 90px;
+    padding-bottom: 113px;
     background-color: #070607;
 }
 
