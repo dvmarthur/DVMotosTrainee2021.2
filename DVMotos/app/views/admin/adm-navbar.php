@@ -17,10 +17,10 @@
       <a class="navbar-brand" href="#">
         <img src="../../../public/assets/png3.png" class="logo" width="120" height="120" alt="">
       </a>
-      <a href="../site/home.html">Home</a>
-      <a href="./adm-produtos.html">Produtos</a>
-      <a href="./adm-categorias.html">Categorias</a>
-      <a href="./adm-user.html">Usuários</a>
+      <a href="../site/home.php">Home</a>
+      <a href="./adm-produtos.php">Produtos</a>
+      <a href="./adm-categorias.php">Categorias</a>
+      <a href="./adm-user.php">Usuários</a>
     </div>
 
 

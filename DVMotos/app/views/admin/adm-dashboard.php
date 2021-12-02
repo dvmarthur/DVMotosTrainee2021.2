@@ -14,7 +14,7 @@
 
     <body>
         <div class="logout">
-            <a href="login.html">
+            <a href="login.php">
                 <img class="sair" src="../../../public/img/logout.png" alt="Imagem de logout/sair">
             </a>
         </div>
@@ -22,7 +22,7 @@
         <div class="miniatura">
 
             <div class="cartao" style="width: 18rem;">
-                <a href="adm-produtos.html">
+                <a href="adm-produtos.php">
                     <img class="card-img-top" src="../../../public/img/renovador.png" alt="Imagem de uma moto com um produto">
                 </a>
                 <div class="card-body">
@@ -31,7 +31,7 @@
             </div>
 
             <div class="cartao" style="width: 18rem;">
-                <a href="categorias.html">
+                <a href="categorias.php">
                     <img class="card-img-top" src="../../../public/img/categoria.png" alt="Imagem de vários modelos de moto">
                 </a>
                 <div class="card-body">
@@ -40,7 +40,7 @@
             </div>
 
             <div class="cartao" style="width: 18rem;">
-                <a href="adm-user.html">
+                <a href="adm-user.php">
                     <img class="card-img-top" src="../../../public/img/usuario.png" alt="Imagem de vários usuários">
                 </a>
                 <div class="card-body">

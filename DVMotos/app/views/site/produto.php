@@ -17,8 +17,8 @@
         <div class="col-md-4 mt-4">
           <nav aria-label="Breadcrumb navigation" role="navigation">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Página Inicial</a></li>
-              <li class="breadcrumb-item"><a href="#">Produtos</a></li>
+              <li class="breadcrumb-item"><a href="home.php">Página Inicial</a></li>
+              <li class="breadcrumb-item"><a href="produtos.php">Produtos</a></li>
               <li class="breadcrumb-item active" aria-current="page">View Produto</li>
             </ol>
           </nav>

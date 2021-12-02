@@ -31,7 +31,7 @@
             <div class="col-md-4">
               <nav aria-label="Breadcrumb navigation" role="navigation">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                  <li class="breadcrumb-item"><a href="adm-dashboard.php">Dashboard</a></li>
                   <li class="breadcrumb-item active" aria-current="page">ADM Usuário</li>
                 </ol>
               </nav>
