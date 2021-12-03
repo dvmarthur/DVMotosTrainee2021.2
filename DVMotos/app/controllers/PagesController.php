@@ -9,12 +9,12 @@ class PagesController
 {
     public function index()
     {
-        
+        return view('/site/home');
     }
 
     public function show()
     {
-
+        
     }
 
     public function create()
