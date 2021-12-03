@@ -11,13 +11,13 @@
 
     <body>
         <!-- Barra de Navegacao -->
-        <div class="navegacao">
+        <!-- <div class="navegacao">
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="quemsomos.php">Quem Somos</a></li>
                 <li><a href="contatos.php">Contato</a></li>
             </ul>
-        </div>
+        </div> -->
 
         <!-- Pagina Principal -->
         <div class="main">
