@@ -19,13 +19,15 @@ class QueryBuilder
     {
         $sql = "select * from {$table}";
 
-        try {
+        try { 
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
+        } 
+        
+        catch (Exception $e) {
             die($e->getMessage());
         }
     }

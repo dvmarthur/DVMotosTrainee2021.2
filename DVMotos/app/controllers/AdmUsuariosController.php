@@ -9,7 +9,10 @@ class AdmUsuariosController
 {
     public function admUser()
     {
-        return view('/admin/adm-user');
+        $user = App::get('database') ->selectAll('user');
+        $tables = ['user' => $user];
+
+        return view('/admin/adm-user', $tables);
     }
 
 

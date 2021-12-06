@@ -17,6 +17,7 @@
         });
       </script>
   </head>
+  
   <body>
 
     <!-- navbar -->
@@ -41,14 +42,17 @@
       </section>
       <!-- fim do breadcrumb e busca -->
 
-      <!-- tabela de produtos -->
+      <!-- tabela de usuários -->
 
-      <div class="d-flex justify-content-between align-items-center mb-2 mt-4 mr-4">
-        <h4 class="mt-2 mb-2 header-title"></h4>
-        <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
-          <i class="ri-add-circle-fill"></i> Adicionar Usuário
-        </a>
-      </div>
+      <form action="/dvmotos/create" method="POST">
+        <div class="d-flex   justify-content-between align-items-center mb-2 mt-4 mr-4">
+          <h4 class="mt-2 mb-2 header-title"></h4>
+          <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
+            <i class="ri-add-circle-fill"></i> Adicionar Usuário
+          </a>
+        </div>
+      </form>
+
       <div class="card">
         <div class="card-body">
           <table class="table" style="border-collapse: collapse; border-spacing: 0; ">
@@ -59,32 +63,38 @@
                 <th>Ações</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
-                <td>User 1</td>
-                <td>usuario1@email.com</td>
-                <td>
+                <?php foreach ($user as $users):?>
+                <td class="nome"><?=$users->nome?>User 1</td>
+                <td class="email"><?=$users->email?>usuario1@email.com</td>
+                <td class="acoes"><?=$users->acoes?>
                   <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
                   <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
                   <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                 </td>
               </tr>
+              <?php endforeach; ?>
+
               <tr>
-                <td>User 2</td>
-                <td>usuario2@email.com</td>
-                <td>
+              <?php foreach ($user as $users):?>
+                <td class="nome"><?=$users->nome?>User 2</td>
+                <td class="email"><?=$users->email?>usuario2@email.com</td>
+                <td class="acoes"><?=$users->acoes?>
                   <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
                   <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
                   <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                 </td>
               </tr>
+              <?php endforeach; ?>
 
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- fim da tabela de produtos -->
+      <!-- fim da tabela de usuários -->
 
     <!-- paginação -->
     <nav aria-label="Page navigation example">
@@ -112,7 +122,7 @@
   <!-- Modal -->
 
     <!-- Modal Visualizar -->
-    <div class="modal fade" id="visualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="visualizarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -170,7 +180,7 @@
     </div>
 
     <!-- Modal Editar -->
-    <div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editarUsuário" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header">
@@ -198,7 +208,9 @@
               </form>
             </div>
             <!--Fim Form Modal Editar-->
+
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
           <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
@@ -208,7 +220,7 @@
     </div>
 
     <!-- Modal Adicionar -->
-    <div class="modal fade" id="adicionarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="adicionarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header">
@@ -217,7 +229,9 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
+
         <div class="modal-body">
+
             <!--Form Modal Adicionar-->
             <div class = "formularioAdicionar">
               <input class="form-control" type="text" placeholder="Nome">
@@ -234,7 +248,9 @@
                 </div>
               </form>
             </div>
+
             <!--Fim Form Modal Adicionar-->
+            
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
