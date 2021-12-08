@@ -35,9 +35,19 @@ class QueryBuilder
 
     }
 
-    public function insert()
+    public function insert($table, $parametros)
     {
-      
+        $sql = "insert into `{$table}` (nome) values ('{$parametros['nome']}')";
+        
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function edit()
@@ -45,9 +55,19 @@ class QueryBuilder
          
     }
 
-    public function delete()
+    public function delete($table, $id)
     {
-      
+        $sql = "delete from {$table} where id = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function read()

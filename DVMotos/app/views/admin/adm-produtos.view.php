@@ -15,6 +15,12 @@
         $(document).ready(function(){
           $('[data-toggle="tooltip"]').tooltip();
         });
+
+        var form = document.getElementById("formDeletar");
+
+        document.getElementById("deletarProduto").addEventListener("click", function () {
+          form.submit();
+        });
       </script>
   </head>
   <body>
@@ -65,24 +71,20 @@
               </tr>
             </thead>
             <tbody>
+              <?php foreach ($produtos as $produto) : ?>
               <tr>
-                <td>2021 Heritage Classic Harley-Davidson</td>
-                <td>Motocicleta</td>
+                <td><?= $produto->nome?></td>
+                <td><?= $produto->categoria?></td>
                 <td>
                   <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
                   <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  <form action="/produtos/delete" method="POST" id="formDeletar">
+                    <input type="hidden" value="<?= $produto->id ?>" name="id">
+                    <a class="delete" title="Deletar"><i class="material-icons">&#xE872;</i></a>
+                  </form>
                 </td>
               </tr>
-              <tr>
-                <td>2021 Heritage Classic Harley-Davidson</td>
-                <td>Motocicleta</td>
-                <td>
-                  <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                  <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                </td>
-              </tr>
+              <?php endforeach;?>
 
             </tbody>
           </table>
@@ -180,6 +182,7 @@
         <div class="modal-body">
             <!--Form Modal Editar-->
             <div class = "formularioEditar">
+            <form action="/tarefas/create" method="POST">
               <input class="form-control" type="text" placeholder="Nome">
               <br>
               <input class="form-control" type="text" placeholder="Descrição">
@@ -194,7 +197,6 @@
                 <option>5</option>
               </select>
               <br>
-              <form>
                 <div class="form-group">
                   <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
                   <input type="file" class="form-control-file" id="exampleFormControlFile1">
@@ -221,14 +223,15 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body">
+        <form action="/produtos/create" method="POST">
+          <div class="modal-body">
             <!--Form Modal Adicionar-->
             <div class = "formularioAdicionar">
-              <input class="form-control" type="text" placeholder="Nome">
+              <input class="form-control" type="text" name="nome" placeholder="Nome">
               <br>
-              <input class="form-control" type="text" placeholder="Descrição">
+              <input class="form-control" type="text" name="descricao" placeholder="Descrição">
               <br>
-              <input class="form-control" type="text" placeholder="Preço">
+              <input class="form-control" type="text" name="preco" placeholder="Preço">
               <br>
               <select class="form-control" id="exampleFormControlSelect1">
                 <option>Motocicleta</option>
@@ -238,19 +241,18 @@
                 <option>5</option>
               </select>
               <br>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
+              <div class="form-group">
+                <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
             </div>
-            <!--Fim Form Modal Adicionar-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
-          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-        </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+            <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
+          </div>
+        </form>
+        <!--Fim Form Modal Adicionar-->
         </div>
       </div>
     </div>

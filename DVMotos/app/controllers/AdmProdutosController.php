@@ -9,7 +9,12 @@ class AdmProdutosController
 {
     public function admProdutos()
     {
-        return view('/admin/adm-produtos');
+        $produtos = App::get('database') -> selectAll('produtos');
+
+        $tables = [
+            'produtos' => $produtos
+        ];
+        return view('/admin/adm-produtos', $tables);
     }
     
     public function show()
@@ -19,7 +24,15 @@ class AdmProdutosController
 
     public function create()
     {
- 
+        $parametros = [
+            'nome' => $_POST['nome'],
+            'descricao' => $_POST['descricao'],
+            'preco' => $_POST['preco'],
+            'categoria' => $_POST['categoria']
+        ];
+
+        App::get('database') -> insert('produtos', $parametros);
+        header('Location: /adm-produtos');
     }
 
     public function store()
@@ -39,6 +52,7 @@ class AdmProdutosController
 
     public function delete()
     {
- 
+        App::get('database')->delete('produtos', $_POST['id']);
+        header('Location: /adm-produtos');
     }
 }
