@@ -4,6 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <title>ADM User | DVMotos Store</title>
 
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -14,6 +15,12 @@
       <script>
         $(document).ready(function(){
           $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        var form = document.getElementById("formDeletar");
+
+        document.getElementById("deletarUsuario").addEventListener("click", function () {
+          form.submit();
         });
       </script>
   </head>
@@ -44,14 +51,12 @@
 
       <!-- tabela de usuários -->
 
-      <form action="/dvmotos/create" method="POST">
-        <div class="d-flex   justify-content-between align-items-center mb-2 mt-4 mr-4">
-          <h4 class="mt-2 mb-2 header-title"></h4>
-          <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
-            <i class="ri-add-circle-fill"></i> Adicionar Usuário
-          </a>
+      <div class="d-flex   justify-content-between align-items-center mb-2 mt-4 mr-4">
+        <h4 class="mt-2 mb-2 header-title"></h4>
+        <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
+          <i class="ri-add-circle-fill"></i> Adicionar Usuário
+        </a>
         </div>
-      </form>
 
       <div class="card">
         <div class="card-body">
@@ -65,29 +70,22 @@
             </thead>
 
             <tbody>
+            <?php foreach ($users as $user) : ?>
               <tr>
-                <?php foreach ($user as $users):?>
-                <td class="nome"><?=$users->nome?>User 1</td>
-                <td class="email"><?=$users->email?>usuario1@email.com</td>
-                <td class="acoes"><?=$users->acoes?>
+                <td><?= $user->nome?></td>
+                <td><?= $user->email?></td>
+                <td>
                   <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
                   <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  
+                  <form action="/users/delete" method="POST" id="formDeletar">
+                    <input type="hidden" value="<?= $user->id ?>" name="id">
+                    <a class="delete" title="Deletar"><i class="material-icons">&#xE872;</i></a>
+                  </form>
                 </td>
               </tr>
-              <?php endforeach; ?>
 
-              <tr>
-              <?php foreach ($user as $users):?>
-                <td class="nome"><?=$users->nome?>User 2</td>
-                <td class="email"><?=$users->email?>usuario2@email.com</td>
-                <td class="acoes"><?=$users->acoes?>
-                  <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                  <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                </td>
-              </tr>
-              <?php endforeach; ?>
+              <?php endforeach;?>
 
             </tbody>
           </table>
@@ -135,7 +133,7 @@
             <div class="container-fluid">
 
               <div class="row">
-                <img src="../../../public/img/heritage-classic.png" alt="Imagem do produto" class="w-100 rounded">
+                <img src="../../../public/img/heritage-classic.png" alt="Imagem do usuário" class="w-100 rounded">
               </div>
 
               <div class="texto-modal">
@@ -190,25 +188,26 @@
             </button>
         </div>
         <div class="modal-body">
+
             <!--Form Modal Editar-->
             <div class = "formularioEditar">
-              <input class="form-control" type="text" placeholder="Nome">
-              <br>
-              <input class="form-control" type="text" placeholder="Email">
-              <br>
-              <input class="form-control" type="text" placeholder="Senha">
-              <br>
+              <form action="/dvmotos/create" method="POST">
+                <input class="form-control" type="text" placeholder="Nome">
+                <br>
+                <input class="form-control" type="text" placeholder="Email">
+                <br>
+                <input class="form-control" type="text" placeholder="Senha">
+                <br>
 
-              <br>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
+                <br>
+          
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
               </form>
             </div>
             <!--Fim Form Modal Editar-->
-
         </div>
 
         <div class="modal-footer">
@@ -230,32 +229,31 @@
             </button>
         </div>
 
-        <div class="modal-body">
+        <form action="/users/create" method="POST">
+          <div class="modal-body">
+              <!--Form Modal Adicionar-->
+              <div class = "formularioAdicionar">
+                <input class="form-control" type="text" name="nome" placeholder="Nome">
+                  <br>
+                  <input class="form-control" type="text" name='email' placeholder="Email">
+                  <br>
+                  <input class="form-control" type="text" name='senha' placeholder="Senha">
+                  <br>
+                
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
+              </div>
 
-            <!--Form Modal Adicionar-->
-            <div class = "formularioAdicionar">
-              <input class="form-control" type="text" placeholder="Nome">
-              <br>
-              <input class="form-control" type="text" placeholder="Email">
-              <br>
-              <input class="form-control" type="text" placeholder="Senha">
-              <br>
-              <br>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
-            </div>
-
-            <!--Fim Form Modal Adicionar-->
-            
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
-          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-        </div>
+              </div>
+              
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+                <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
+             </div>
+          </form>
+        <!--Fim Form Modal Adicionar-->
         </div>
       </div>
     </div>
