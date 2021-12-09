@@ -76,7 +76,7 @@
                 <td><?= $user->email?></td>
                 <td>
                   <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                  <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                  <a data-target="#editarUsuario" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
                   
                   <form action="/users/delete" method="POST" id="formDeletar">
                     <input type="hidden" value="<?= $user->id ?>" name="id">
@@ -84,9 +84,7 @@
                   </form>
                 </td>
               </tr>
-
               <?php endforeach;?>
-
             </tbody>
           </table>
         </div>

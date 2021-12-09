@@ -54,9 +54,21 @@ class QueryBuilder
         }
     }
 
-    public function edit()
+    public function edit($table, $id)
     {
-         
+        $sql = "edit from {$table} where id = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } 
+        
+        catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function delete($table, $id)
