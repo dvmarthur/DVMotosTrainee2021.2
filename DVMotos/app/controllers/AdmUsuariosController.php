@@ -15,7 +15,7 @@ class AdmUsuariosController
             'users' => $users
         ];
 
-        return view('/admin/adm-user', $tables);
+        return view('admin/adm-user', $tables);
     }
 
 
@@ -30,10 +30,10 @@ class AdmUsuariosController
         $parametros = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
-            'senha' => $_POST['senha']
+            'senha' => hash("sha512", $_POST['senha'])
         ];
 
-        App::get('database') -> insert('users', $parametros);
+        App::get('database') -> insertUsuarios('users', $parametros);
         header('Location: /adm-user');
     }
 

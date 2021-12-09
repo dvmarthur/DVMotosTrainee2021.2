@@ -37,9 +37,9 @@ class QueryBuilder
 
     }
 
-    public function insert($table, $parametros)
+    public function insertUsuarios($table, $parametros)
     {
-        $sql = "insert into `{$table}` (nome) values ('{$parametros['nome']}')";
+        $sql= "INSERT INTO users(nome, email, senha) VALUES ('{$parametros['nome']}','{$parametros['email']}','{$parametros['senha']}')";
 
         try {
             $stmt = $this->pdo->prepare($sql);

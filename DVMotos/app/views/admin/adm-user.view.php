@@ -53,7 +53,7 @@
 
       <div class="d-flex   justify-content-between align-items-center mb-2 mt-4 mr-4">
         <h4 class="mt-2 mb-2 header-title"></h4>
-        <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
+        <a data-target="#adicionarUsuario"  class="btn btn-warning btn-preto" data-toggle="modal">
           <i class="ri-add-circle-fill"></i> Adicionar Usuário
         </a>
         </div>
@@ -229,6 +229,7 @@
 
         <form action="/users/create" method="POST">
           <div class="modal-body">
+
               <!--Form Modal Adicionar-->
               <div class = "formularioAdicionar">
                 <input class="form-control" type="text" name="nome" placeholder="Nome">
