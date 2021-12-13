@@ -11,17 +11,6 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="../../../public/css/css_adm_produtos.css">
 
-      <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();
-        });
-
-        var form = document.getElementById("formDeletar");
-
-        document.getElementById("deletarProduto").addEventListener("click", function () {
-          form.submit();
-        });
-      </script>
   </head>
   <body>
 
@@ -72,16 +61,23 @@
             </thead>
             <tbody>
               <?php foreach ($produtos as $produto) : ?>
+
+                <?php require 'modal/modal-adicionar-prod.php' ?>
+                <?php require 'modal/modal-editar-prod.php' ?>
+                <?php require 'modal/modal-visualizar-prod.php' ?>
+
               <tr>
                 <td><?= $produto->nome?></td>
                 <td><?= $produto->categoria?></td>
                 <td>
-                  <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                  <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  <form action="/produtos/delete" method="POST" id="formDeletar">
-                    <input type="hidden" value="<?= $produto->id ?>" name="id">
-                    <a class="delete" title="Deletar"><i class="material-icons">&#xE872;</i></a>
-                  </form>
+                    <form action="/produtos/delete" method="POST" id="formDeletar">
+                      <a data-target="#visualizarProduto-<?= $produto->id ?>" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
+                      <a data-target="#editarProduto-<?= $produto->id ?>" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                        <input type="hidden" value="<?= $produto->id ?>" name="id">
+                        <button type="submit" id="completed-task" class="botao_deletar">
+                              <i class="material-icons">&#xE872;</i>
+                        </button>
+                    </form>
                 </td>
               </tr>
               <?php endforeach;?>
@@ -115,152 +111,13 @@
     </nav>
     <!-- fim da paginação -->
 
-
-  <!-- Modal -->
-
-    <!-- Modal Visualizar -->
-    <div class="modal fade" id="visualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">2021 Heritage Classic Harley-Davidson</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-
-              <div class="row">
-                <img src="../../../public/img/heritage-classic.png" alt="Imagem do produto" class="w-100 rounded">
-              </div>
-
-              <div class="texto-modal">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <h3>Preço: </h3>
-                    <p>R$75.000,00</p>
-                  </div>
-                  <div class="col-sm-6">
-                    <h3>Categoria: </h3>
-                    <p>Motocicleta</p>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h3>Descrição: </h3>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p>A cruiser americana por excelência. Detalhes vintage impressionantes e estilo rock and roll puro. O estilo escurecido, o toque moderno e a pilotagem revigorada do modelo Heritage leva a nostalgia a um novo patamar.</p>
-                  </div>
-                </div>              
-              </div>
-
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-warning btn-amarelo" data-dismiss="modal" data-toggle="modal" data-target="#editarProduto">Editar</button>
-            <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal Editar -->
-    <div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <!--Form Modal Editar-->
-            <div class = "formularioEditar">
-            <form action="/tarefas/create" method="POST">
-              <input class="form-control" type="text" placeholder="Nome">
-              <br>
-              <input class="form-control" type="text" placeholder="Descrição">
-              <br>
-              <input class="form-control" type="text" placeholder="Preço">
-              <br>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>Motocicleta</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-              <br>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
-            </div>
-            <!--Fim Form Modal Editar-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
-          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal Adicionar -->
-    <div class="modal fade" id="adicionarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Adicionar Produto</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <form action="/produtos/create" method="POST">
-          <div class="modal-body">
-            <!--Form Modal Adicionar-->
-            <div class = "formularioAdicionar">
-              <input class="form-control" type="text" name="nome" placeholder="Nome">
-              <br>
-              <input class="form-control" type="text" name="descricao" placeholder="Descrição">
-              <br>
-              <input class="form-control" type="text" name="preco" placeholder="Preço">
-              <br>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>Motocicleta</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-              <br>
-              <div class="form-group">
-                <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
-            <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-          </div>
-        </form>
-        <!--Fim Form Modal Adicionar-->
-        </div>
-      </div>
-    </div>
-    <!-- fim modal -->
-
-    <!-- footer -->
-
     <script src="scripts.js"></script>
+    <script>
+        function deletarProduto() {
+          $('#deletarProduto').submit();
+        }
+
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

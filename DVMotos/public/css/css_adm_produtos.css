@@ -233,6 +233,14 @@ body {
         background-color: whitesmoke;
     }
 
+    .botao_deletar {
+        background: none;
+        padding: 0px;
+        border: none;
+        cursor: pointer;
+        color: red;
+      }
+
 /** Modal **/
     .texto-modal {
         margin-top: 2rem !important;

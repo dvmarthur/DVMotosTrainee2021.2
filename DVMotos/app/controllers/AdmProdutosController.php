@@ -22,7 +22,7 @@ class AdmProdutosController
         
     }
 
-    public function create()
+    public function createProduto()
     {
         $parametros = [
             'nome' => $_POST['nome'],
@@ -42,12 +42,21 @@ class AdmProdutosController
 
     public function edit()
     {
-  
+
     }
 
-    public function update()
-    {
+    public function updateProduto()
+    {   
+        $parametros = [
+            'id' => $_POST['id'],
+            'nome' => $_POST['nome'],
+            'descricao' => $_POST['descricao'],
+            'preco' => $_POST['preco'],
+            'categoria' => $_POST['categoria']
+        ];
         
+        App::get('database')->edit('produtos', $parametros);
+        header('Location: /adm-produtos');
     }
 
     public function delete()
