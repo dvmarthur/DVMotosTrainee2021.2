@@ -11,18 +11,6 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="../../../public/css/css_adm_produtos.css">
-
-      <script>
-        $(document).ready(function(){
-          $('[data-toggle="tooltip"]').tooltip();
-        });
-
-        var form = document.getElementById("formDeletar");
-
-        document.getElementById("deletarUsuario").addEventListener("click", function () {
-          form.submit();
-        });
-      </script>
   </head>
   
   <body>
@@ -71,16 +59,17 @@
 
             <tbody>
             <?php foreach ($users as $user) : ?>
+
               <tr>
                 <td><?= $user->nome?></td>
                 <td><?= $user->email?></td>
                 <td>
-                  <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                  <a data-target="#editarUsuario" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  
                   <form action="/users/delete" method="POST" id="formDeletar">
-                    <input type="hidden" value="<?= $user->id ?>" name="id">
-                    <a class="delete" title="Deletar"><i class="material-icons">&#xE872;</i></a>
+                        <a data-target="#editarUsuario-<?= $user->id ?>" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                          <input type="hidden" value="<?= $user->id ?>" name="id">
+                          <button type="submit" id="completed-task" class="botao_deletar">
+                                <i class="material-icons">&#xE872;</i>
+                          </button>
                   </form>
                 </td>
               </tr>
@@ -114,8 +103,7 @@
     </nav>
     <!-- fim da paginação -->
 
-
-  <!-- Modal -->
+    <!-- Modal -->
 
     <!-- Modal Visualizar -->
     <div class="modal fade" id="visualizarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -127,46 +115,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-
-              <div class="row">
-                <img src="../../../public/img/heritage-classic.png" alt="Imagem do usuário" class="w-100 rounded">
-              </div>
-
-              <div class="texto-modal">
-                <div class="row">
-                    <div class="col-sm-12">
-                    <h3>Nome: </h3>
-                    <p>Usuário Um de Oliveira</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h3>Email: </h3>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p>Usuario1@email.com</p>
-                  </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-sm-12">
-                      <h3>Senha: </h3>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <p>123456</p>
-                    </div>
-                  </div>   
-              </div>
-
-            </div>
-          </div>
+          
           <div class="modal-footer">
             <button type="button" class="btn btn-warning btn-amarelo" data-dismiss="modal" data-toggle="modal" data-target="#editarProduto">Editar</button>
             <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
@@ -198,11 +147,6 @@
                 <br>
 
                 <br>
-          
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                  </div>
               </form>
             </div>
             <!--Fim Form Modal Editar-->
@@ -238,11 +182,6 @@
                   <br>
                   <input class="form-control" type="text" name='senha' placeholder="Senha">
                   <br>
-                
-                  <div class="form-group">
-                    <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                  </div>
               </div>
 
               </div>
@@ -257,6 +196,14 @@
       </div>
     </div>
     <!-- fim modal -->
+
+    <script src="scripts.js"></script>
+
+    <script>
+        function deletarUsuario() {
+          $('#deletarUsuario').submit();
+        }
+    </script>
 
     <!-- footer -->
 

@@ -54,18 +54,28 @@ class QueryBuilder
         }
     }
 
-    public function edit($table, $id)
+    public function edit($table , $parametros)
     {
-        $sql = "edit from {$table} where id = {$id}";
+        $sql = "UPDATE {$table} SET ";
+
+        //Adicionando os parametros
+        foreach($parametros as $chave => $parametro)
+        {
+            $sql = $sql . "{$chave} = '{$parametro}', ";
+        }
+
+        //Tirando a ultima virgula
+        $sql = rtrim($sql, " " . ",");
+
+        //Adicionando o id
+        $sql = $sql . " WHERE id = {$parametros['id']}";
+
 
         try {
             $stmt = $this->pdo->prepare($sql);
-
             $stmt->execute();
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
         } 
-        
         catch (Exception $e) {
             die($e->getMessage());
         }

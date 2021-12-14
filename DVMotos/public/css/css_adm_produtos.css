@@ -268,3 +268,11 @@ body {
 th {
     background-color: #070607 !important;
 }
+
+.botao_deletar {
+    background: none;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    color: red;
+  }

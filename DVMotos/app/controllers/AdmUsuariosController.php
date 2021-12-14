@@ -11,11 +11,11 @@ class AdmUsuariosController
     {
         $users = App::get('database') -> selectAll('users');
 
-        $tables = [
+        $table = [
             'users' => $users
         ];
 
-        return view('admin/adm-user', $tables);
+        return view('admin/adm-user', $table);
     }
 
 
@@ -44,12 +44,19 @@ class AdmUsuariosController
 
     public function edit()
     {
-  
     }
 
-    public function update()
+    public function updateUsuario()
     {
-        
+        $parametros = [
+            'id' => $_POST['id'],
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => $_POST['senha'],
+        ];
+
+        App::get('database')->edit('users', $parametros);
+        header('Location: /adm-user');
     }
 
     public function delete()
