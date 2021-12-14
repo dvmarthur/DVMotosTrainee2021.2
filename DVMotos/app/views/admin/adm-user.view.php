@@ -106,7 +106,7 @@
     <!-- Modal -->
 
     <!-- Modal Editar -->
-    <div class="modal fade" id="editarUsuário" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editarUsuario-<?= $user->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header">
@@ -119,27 +119,27 @@
 
             <!--Form Modal Editar-->
             <div class = "formularioEditar">
-              <form action="/users/edit" method="POST">
-                <input class="form-control" type="text" placeholder="Nome">
+              <form action="/users/update" method="POST">
+                <input type="hidden" name="id" value="<?= $user->id ?>">
+                <input class="form-control" type="text" name="nome" value="<?= $user->nome ?>" placeholder="<?= $user->nome ?>">
                 <br>
-                <input class="form-control" type="text" placeholder="Email">
+                <input class="form-control" type="text" name="email" value="<?= $user->email ?>" placeholder="<?= $user->email ?>">
                 <br>
-                <input class="form-control" type="text" placeholder="Senha">
+                <input class="form-control" type="text" name="senha" value="<?= $user->senha ?>" placeholder="<?= $user->senha ?>">
                 <br>
-
-                <br>
-              </form>
             </div>
             <!--Fim Form Modal Editar-->
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+          <button type="submit" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+          </form>
           <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
         </div>
         </div>
       </div>
     </div>
+
 
     <!-- Modal Adicionar -->
     <div class="modal fade" id="adicionarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

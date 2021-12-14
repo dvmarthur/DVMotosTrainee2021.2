@@ -17,7 +17,7 @@ class QueryBuilder
 
     public function selectAll($table)
     {
-        $sql = "select * from {$table}";
+        $sql = "SELECT * FROM {$table}";
 
         try { 
             $stmt = $this->pdo->prepare($sql);
@@ -32,9 +32,22 @@ class QueryBuilder
         }
     }
 
-    public function select()
+    public function select($table, $id)
     {
+        $sql = "SELECT * FROM {$table} WHERE id = {$id}";
 
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+
+        } 
+        
+        catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function insertUsuarios($table, $parametros)
@@ -76,6 +89,7 @@ class QueryBuilder
             $stmt->execute();
 
         } 
+        
         catch (Exception $e) {
             die($e->getMessage());
         }

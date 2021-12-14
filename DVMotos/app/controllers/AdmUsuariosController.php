@@ -25,7 +25,7 @@ class AdmUsuariosController
         
     }
 
-    public function create()
+    public function createUsers()
     {
         $parametros = [
             'nome' => $_POST['nome'],
@@ -42,13 +42,13 @@ class AdmUsuariosController
 
     }
 
-    public function updateUsuario()
+    public function updateUsers()
     {
         $parametros = [
             'id' => $_POST['id'],
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
-            'senha' => $_POST['senha'],
+            'senha' => $_POST['senha']
         ];
 
         App::get('database')->edit('users', $parametros);

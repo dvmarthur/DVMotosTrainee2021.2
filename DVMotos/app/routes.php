@@ -24,6 +24,6 @@ $router->get('adm-user', 'AdmUsuariosController@admUser');
 $router->get('adm-categorias', 'AdmCategoriasController@admCategorias');
 $router->get('adm-produtos', 'AdmProdutosController@admProdutos');
 
-$router->post('users/create', 'AdmUsuariosController@create');
-$router->post('users/uptade', 'AdmUsuariosController@updateUsuario');
+$router->post('users/create', 'AdmUsuariosController@createUsers');
+$router->post('users/update', 'AdmUsuariosController@updateUsers');
 $router->post('users/delete', 'AdmUsuariosController@delete');
