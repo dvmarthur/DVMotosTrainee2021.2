@@ -42,10 +42,6 @@ class AdmUsuariosController
 
     }
 
-    public function edit()
-    {
-    }
-
     public function updateUsuario()
     {
         $parametros = [
