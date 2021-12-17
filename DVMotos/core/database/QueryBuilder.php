@@ -116,4 +116,21 @@ class QueryBuilder
     {
       
     }
+
+    public function logar($table, $email, $senha)
+    {
+        $sql = "select 'email' from {$table} where email='{$email}'and senha='{$senha}'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } 
+        
+        catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

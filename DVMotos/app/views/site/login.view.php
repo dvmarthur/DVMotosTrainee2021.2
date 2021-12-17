@@ -13,25 +13,20 @@
 <body>
   
   <div class="login">      
-        <form class="px-4 py-3">
+        <form class="px-4 py-3" method="POST" action="login/entrar" id="formlogin" name="formlogin">
           <a class="navbar-brand" href="#">
             <img src="../../../public/assets/moto1.png" class="logo" width="60" height="60" alt="">
           </a>
           <div class="form-group">
-            <label for="exampleDropdownFormEmail1">Endereço de email</label>
-            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@exemplo.com">
+            <label for="login">Endereço de email</label>
+            <input type="email" class="form-control" name="email" id="login" placeholder="email@exemplo.com">
           </div>
           <div class="form-group">
-            <label for="exampleDropdownFormPassword1">Senha</label>
-            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="dropdownCheck">
-            <label class="form-check-label" for="dropdownCheck">
-              Remember me
-            </label>
-          </div>
-          <a href="#" class="btn btn-warning btn-call-to-action">Entrar</a>
+          <button class="btn btn-warning btn-call-to-action" type="submit">Entrar</button>
+          <a href="/" class="btn btn-warning btn-call-to-action ml-5" type="button">Voltar</a>
         </form>
       </div>
     <script src="scripts.js"></script>
