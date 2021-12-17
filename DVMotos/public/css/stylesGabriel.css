@@ -1,71 +1,74 @@
 /* Elementos */
 
 body {
-    margin-left: 250px;
-    margin-right: 250px;
-    background-color: #070607;
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
-    color:white;
+    color:white !important;
+    background-color: #070607 !important;
+}
+
+.conteudo-pagina {
+    margin-left: 250px !important;
+    margin-right: 250px !important;
 }
 
 /* Classes */
 
 .instrucoes {
-    text-align: center;
+    text-align: center !important;
 }
 
 .instrucoes h1 {
-    margin-top: 100px;
-    color: #FFCE07;
+    margin-top: 100px !important;
+    color: #FFCE07 !important;
 }
 
 .instrucoes p {
-    font-size: 24px;
+    font-size: 24px !important;
 }
 
 .entrar-contato {
-    text-align: center;
+    text-align: center !important;
 }
 
 .form-floating {
-    color:#808080;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    color:#808080 !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
 }
 
 .mapa {
-    text-align: center;
+    text-align: center !important;
 }
 
 .mapa h1 {
-      margin-bottom: 25px;
-      margin-top: 120px;
-      color: #FFCE07;
+      margin-bottom: 25px !important;
+      margin-top: 120px !important;
+      color: #FFCE07 !important;
 }
 
 .local {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 
 .telefone {
-    color: #FFCE07;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    text-align: center;
+    color: #FFCE07 !important;
+    margin-top: 50px !important;
+    margin-bottom: 100px !important;
+    text-align: center !important;
 }
 
 @media(max-widht: 750px) {
     .instrucoes {
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 150px !important;
+        margin-right: 150px !important; 
     }
 
     .mapa {
-        width: 100%;
+        width: 100% !important;
     }
 
     iframe {
-        margin-left: 150px;
-        margin-right: 150px;
+        margin-left: 150px !important;
+        margin-right: 150px !important;
     }
 }

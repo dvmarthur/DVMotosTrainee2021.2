@@ -19,6 +19,7 @@
             </ul>
         </div> -->
 
+        <?php require('navbar.php'); ?>
         <!-- Pagina Principal -->
         <div class="main">
     
@@ -58,6 +59,7 @@
             </div>
         </div>
 
+        <?php require('footer.php'); ?>
     </body>
 
 </html>
