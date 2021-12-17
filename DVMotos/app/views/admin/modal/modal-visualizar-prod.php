@@ -42,7 +42,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-warning btn-amarelo" data-dismiss="modal" data-toggle="modal" data-target="#editarProduto">Editar</button>
+            <button type="button" class="btn btn-warning btn-amarelo" data-dismiss="modal" data-toggle="modal" data-target="#editarProduto-<?= $produto->id ?>">Editar</button>
             <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
           </div>
         </div>

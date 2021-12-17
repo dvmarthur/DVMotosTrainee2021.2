@@ -8,8 +8,14 @@ use Exception;
 class ProdutoController
 {
     public function produto()
-    {
-        return view('/site/produto');
+    {   
+        $produtos = App::get('database') -> select('produtos', '17');
+
+        $tables = [
+            'produtos' => $produtos
+        ];
+
+        return view('/site/produto', $tables);
     }
     
     public function show()

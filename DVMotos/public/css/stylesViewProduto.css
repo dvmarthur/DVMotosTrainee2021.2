@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
     color: #070607;
 } 
@@ -63,10 +63,13 @@ body {
     width: 100%;
 }
 
-a {
+.link-pagina {
     color: #FFCE07 !important;
     font-weight: bold !important;
-    text-decoration: none;
+}
+
+.form-check .form-check-input:hover {
+    cursor: pointer;
 }
 
 .form-check .form-check-input:checked {
@@ -76,4 +79,9 @@ a {
 
 .descricao {
     width: 100%;
+}
+
+.links {
+    margin: 10px 4px !important;
+    background-color: whitesmoke !important;
 }

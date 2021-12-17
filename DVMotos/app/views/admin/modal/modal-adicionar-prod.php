@@ -19,7 +19,7 @@
               <input class="form-control" type="text" name="preco" placeholder="Preço">
               <br>
               <select class="form-control" id="exampleFormControlSelect1" name="categoria">
-                <option>Motocicleta</option>
+                <option value="motocicleta">Motocicleta</option>
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>

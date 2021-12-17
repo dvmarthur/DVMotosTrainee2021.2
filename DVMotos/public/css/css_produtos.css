@@ -1,6 +1,6 @@
 body {
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
 }
 
 /** botões **/
@@ -37,7 +37,7 @@ body {
     }
 
 /** links **/
-    a {
+    .link-pagina {
         color: #FFCE07 !important;
         font-weight: bold !important;
     }
