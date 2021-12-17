@@ -126,7 +126,7 @@ h4 {
 
 /* Links */
 
-a {
+.link-pagina {
     color: #FFCE07 !important;
     font-weight: bold !important;
 }

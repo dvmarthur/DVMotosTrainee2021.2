@@ -7,14 +7,14 @@ html, body {
 
 body {
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
-    background-color: #070607;
+    background-color: #070607 !important;
 }
 
 /* TAGs */
 
 /* Quem Somos */
-hr {
-    border-color: #FF0000;
+.linha {
+    border-color: #FF0000 !important;
 }
 
 a {

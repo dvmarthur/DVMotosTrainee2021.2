@@ -51,55 +51,26 @@
     <h2 class="text-center my-3">ÚLTIMOS PRODUTOS</h2>
 
     <div class="row justify-content-between">
-      
-      <div class="col-sm my-3 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <img src="../../../public/img/img_card.jpg" class="card-img-top" alt="Produto">
-          <div class="card-body">
-            <p class="card-text">Nome do Modelo 123</p>
-            <h5 class="card-title">R$ 5.000,00</h5>
-            <a href="#" class="btn btn-warning botao-padrao">Mais informações</a>
-          </div>
-        </div>
-      </div>
 
+      <?php $i = 0; ?>
+      <?php foreach ($produtos as $produto) : ?>
+      <?php if(++$i > 4) break; ?>
       <div class="col-sm my-3 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
           <img src="../../../public/img/img_card.jpg" class="card-img-top" alt="Produto">
           <div class="card-body">
-            <p class="card-text">Nome do Modelo 123</p>
-            <h5 class="card-title">R$ 5.000,00</h5>
-            <a href="#" class="btn btn-warning botao-padrao">Mais informações</a>
+            <p class="card-text"><?= $produto->nome?></p>
+            <h5 class="card-title">R$ <?= $produto->preco?></h5>
+            <a href="/produto?id=<?= $produto->id?>" class="btn btn-warning botao-padrao">Mais informações</a>
           </div>
         </div>
       </div>
-
-      <div class="col-sm my-3 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <img src="../../../public/img/img_card.jpg" class="card-img-top" alt="Produto">
-          <div class="card-body">
-            <p class="card-text">Nome do Modelo 123</p>
-            <h5 class="card-title">R$ 5.000,00</h5>
-            <a href="#" class="btn btn-warning botao-padrao">Mais informações</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-sm my-3 d-flex justify-content-center">
-        <div class="card" style="width: 18rem;">
-          <img src="../../../public/img/img_card.jpg" class="card-img-top" alt="Produto">
-          <div class="card-body">
-            <p class="card-text">Nome do Modelo 123</p>
-            <h5 class="card-title">R$ 5.000,00</h5>
-            <a href="#" class="btn btn-warning botao-padrao">Mais informações</a>
-          </div>
-        </div>
-      </div>
+      <?php endforeach;?>
 
     </div>
 
     <div id="botao-produtos" class="d-flex justify-content-center">
-      <a href="#" class="btn btn-warning botao-padrao">Ver mais produtos</a>
+      <a href="/produtos" class="btn btn-warning botao-padrao">Ver mais produtos</a>
     </div>
 
     <div class="linha"></div>
@@ -110,14 +81,14 @@
       <div class="col-sm my-3 d-flex justify-content-center call-to-action">
         <div class="card-body">
           <h3>FALE COM A GENTE!</h3>
-          <a href="contatos.php" class="btn btn-warning btn-call-to-action">CONTATO</a>
+          <a href="/contato" class="btn btn-warning btn-call-to-action">CONTATO</a>
         </div>
       </div>
 
       <div class="col-sm my-3 d-flex justify-content-center call-to-action">
         <div class="card-body">
           <h3>CONHEÇA MAIS SOBRE NOSSA EMPRESA!</h3>
-          <a href="quemsomos.php" class="btn btn-warning btn-call-to-action">QUEM SOMOS</a>
+          <a href="/quem-somos" class="btn btn-warning btn-call-to-action">QUEM SOMOS</a>
         </div>
       </div>
     </div>

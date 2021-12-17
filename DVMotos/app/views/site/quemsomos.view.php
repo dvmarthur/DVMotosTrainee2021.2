@@ -43,17 +43,17 @@
             <!-- Missao, Visao e Valores -->
             <div class="quem-somos">
                 <h2>Missão</h2>
-                <hr>
+                <hr class="linha">
     
                 <p>Trazendo mais conforto e segurança para pessoas e empresas e levar inspiração para todos.</p>
     
                 <h2>Visão</h2>
-                <hr>
+                <hr class="linha">
     
                 <p>Ser referência no atendimento e na qualidade de seus produtos, tanto os veículos quanto os equipamentos de segurança.</p>
     
                 <h2>Valores</h2>
-                <hr>
+                <hr class="linha">
                 
                 <p>Modernidade, acessibilidade, responsabilidade, compromisso, verdade, diversidade e boa relação.</p>
             </div>

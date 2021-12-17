@@ -9,7 +9,13 @@ class HomeController
 {
     public function index()
     {
-        return view('/site/home');
+        $produtos = App::get('database') -> selectAll('produtos');
+
+        $tables = [
+            'produtos' => $produtos
+        ];
+
+        return view('/site/home', $tables);
     }
     
     public function show()
