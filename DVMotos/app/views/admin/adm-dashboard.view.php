@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Dashboard Administrativa</title>
+        <title>Dashboard Administrativa | DVMotos Store</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

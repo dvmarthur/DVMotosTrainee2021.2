@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Quem Somos - DVMotos</title>
+        <title>Quem Somos | DVMotos Store</title>
 
         <meta charset="utf-8">
 		<link rel="stylesheet" href="../../../public/css/viewQuemSomos.css">
