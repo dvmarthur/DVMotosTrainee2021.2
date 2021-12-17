@@ -2,7 +2,11 @@
 
 body {
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
+}
+
+main {
+    margin-left: 160px ;
 }
 
 /* TAGs */
@@ -52,7 +56,7 @@ body {
     padding: 215px;
     padding-top: 180px;
     padding-bottom: 113px;
-    background-color: #070607;
+    background-color: #070607 !important;
 }
 
 .cartao {
@@ -308,7 +312,7 @@ table.table td i {
 }
 
 .card {
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
 }
 
 /* Modal */

@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Dashboad Administrativa</title>
+        <title>Dashboard Administrativa</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,42 +13,44 @@
     </head>
 
     <body>
+    <?php require('adm-navbar.view.php'); ?>
+
         <div class="logout">
-            <a href="login.php">
+            <a href="login">
                 <img class="sair" src="../../../public/img/logout.png" alt="Imagem de logout/sair">
             </a>
         </div>
 
-        <div class="miniatura">
+            <div class="miniatura">
 
             <div class="cartao" style="width: 18rem;">
-                <a href="adm-produtos.php">
+                <a href="/adm-produtos">
                     <img class="card-img-top" src="../../../public/img/renovador.png" alt="Imagem de uma moto com um produto">
                 </a>
                 <div class="card-body">
-                  <p class="card-text">Produtos</p>
+                <p class="card-text">Produtos</p>
                 </div>
             </div>
 
             <div class="cartao" style="width: 18rem;">
-                <a href="categorias.php">
+                <a href="/adm-categorias">
                     <img class="card-img-top" src="../../../public/img/categoria.png" alt="Imagem de vários modelos de moto">
                 </a>
                 <div class="card-body">
-                  <p class="card-text">Categorias</p>
+                <p class="card-text">Categorias</p>
                 </div>
             </div>
 
             <div class="cartao" style="width: 18rem;">
-                <a href="adm-user.php">
+                <a href="/adm-usuarios">
                     <img class="card-img-top" src="../../../public/img/usuario.png" alt="Imagem de vários usuários">
                 </a>
                 <div class="card-body">
-                  <p class="card-text">Usuários</p>
+                <p class="card-text">Usuários</p>
                 </div>
             </div>
 
-        </div>
+            </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

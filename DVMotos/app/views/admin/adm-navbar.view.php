@@ -11,22 +11,22 @@
     <link rel="stylesheet" href="../../../public/css/adm-navbar.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-home">
+    <nav class="navbar">
        <!-- Side navigation -->
     <div class="sidenav">
       <a class="navbar-brand" href="#">
         <img src="../../../public/assets/png3.png" class="logo" width="120" height="120" alt="">
       </a>
-      <a href="../site/home.php">Home</a>
-      <a href="./adm-produtos.php">Produtos</a>
-      <a href="./adm-categorias.php">Categorias</a>
-      <a href="./adm-user.php">Usuários</a>
+      <a href="/adm-dashboard">Home</a>
+      <a href="./adm-produtos">Produtos</a>
+      <a href="./adm-categorias">Categorias</a>
+      <a href="./adm-usuarios">Usuários</a>
     </div>
 
 
   </nav>
-  <main>
-  <!-- Page content -->
+
+  <!-- <main>
     <div class="main">
       <h2>Sidebar</h2>
       <p>This sidebar is of full height (100%) and always shown.</p>
@@ -37,7 +37,7 @@
       <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
       ...
     </div>
-  </main>
+  </main> -->
   
     <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,6 +1,10 @@
 body {
     font-family: "Arial Rounded MT Bold", Arial, Helvetica, sans-serif !important;
-    background-color: whitesmoke;
+    background-color: whitesmoke !important;
+}
+
+main {
+    margin-left: 160px;
 }
 
 /** botões **/
@@ -61,7 +65,7 @@ body {
     }
 
 /** links **/
-    a {
+    .link-pagina {
         color: #FFCE07 !important;
         font-weight: bold !important;
     }
@@ -154,7 +158,7 @@ body {
 /** paginação **/
     .page-link {
         background-color: #070607 !important;
-        border: 1px solid whitesmoke;
+        border: 1px solid whitesmoke !important;
     }
 
     .pagination {
@@ -230,7 +234,7 @@ body {
     }
 
     .card {
-        background-color: whitesmoke;
+        background-color: whitesmoke !important;
     }
 
     .botao_deletar {

@@ -20,93 +20,95 @@
   <body>
 
     <!-- navbar -->
+    <?php require('adm-navbar.view.php'); ?>
 
     <!-- corpo da página -->
+    <main>
+        <!-- breadcrumb e busca -->
+        <section class="header-main border-bottom">
+          <div class="container-fluid">
+            <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+              
+              <div class="col-md-4">
+                <nav aria-label="Breadcrumb navigation" role="navigation">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="link-pagina" href="/adm-dashboard">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">ADM Usuário</li>
+                  </ol>
+                </nav>
+              </div>
 
-      <!-- breadcrumb e busca -->
-      <section class="header-main border-bottom">
-        <div class="container-fluid">
-          <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
-            
-            <div class="col-md-4">
-              <nav aria-label="Breadcrumb navigation" role="navigation">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="adm-dashboard.php">Dashboard</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">ADM Usuário</li>
-                </ol>
-              </nav>
-            </div>
+          </div>
+        </section>
+        <!-- fim do breadcrumb e busca -->
 
-        </div>
-      </section>
-      <!-- fim do breadcrumb e busca -->
+        <!-- tabela de produtos -->
 
-      <!-- tabela de produtos -->
-
-      <div class="d-flex justify-content-between align-items-center mb-2 mt-4 mr-4">
-        <h4 class="mt-2 mb-2 header-title"></h4>
-        <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
-          <i class="ri-add-circle-fill"></i> Adicionar Usuário
-        </a>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <table class="table" style="border-collapse: collapse; border-spacing: 0; ">
-            <thead class="thead-dark">
-              <tr>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>User 1</td>
-                <td>usuario1@email.com</td>
-                <td>
-                  <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                  <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>User 2</td>
-                <td>usuario2@email.com</td>
-                <td>
-                  <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                  <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                  <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- fim da tabela de produtos -->
-
-    <!-- paginação -->
-    <nav aria-label="Page navigation example">
-      <ul class="pagination justify-content-center">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Anterior</span>
+        <div class="d-flex justify-content-between align-items-center mb-2 mt-4 mr-4">
+          <h4 class="mt-2 mb-2 header-title"></h4>
+          <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
+            <i class="ri-add-circle-fill"></i> Adicionar Usuário
           </a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Próxima</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <!-- fim da paginação -->
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <table class="table" style="border-collapse: collapse; border-spacing: 0; ">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Nome</th>
+                  <th>Email</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>User 1</td>
+                  <td>usuario1@email.com</td>
+                  <td>
+                    <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
+                    <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                    <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>User 2</td>
+                  <td>usuario2@email.com</td>
+                  <td>
+                    <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
+                    <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                    <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- fim da tabela de produtos -->
+
+      <!-- paginação -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link  link-pagina" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Anterior</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link link-pagina" href="#">1</a></li>
+          <li class="page-item"><a class="page-link link-pagina" href="#">2</a></li>
+          <li class="page-item"><a class="page-link link-pagina" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link  link-pagina" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Próxima</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- fim da paginação -->
+    </main>
 
 
   <!-- Modal -->
