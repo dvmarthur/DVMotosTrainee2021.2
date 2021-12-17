@@ -13,18 +13,16 @@
 <body>
     <nav class="navbar">
        <!-- Side navigation -->
-    <div class="sidenav">
-      <a class="navbar-brand" href="#">
-        <img src="../../../public/assets/png3.png" class="logo" width="120" height="120" alt="">
-      </a>
-      <a href="/adm-dashboard">Home</a>
-      <a href="./adm-produtos">Produtos</a>
-      <a href="./adm-categorias">Categorias</a>
-      <a href="./adm-usuarios">Usuários</a>
-    </div>
-
-
-  </nav>
+      <div class="sidenav">
+        <a class="navbar-brand" href="#">
+          <img src="../../../public/assets/png3.png" class="logo" width="120" height="120" alt="">
+        </a>
+        <a href="/adm-dashboard">Home</a>
+        <a href="./adm-produtos">Produtos</a>
+        <a href="./adm-categorias">Categorias</a>
+        <a href="./adm-usuarios">Usuários</a>
+      </div>
+    </nav>
 
   <!-- <main>
     <div class="main">

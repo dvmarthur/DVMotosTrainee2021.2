@@ -15,16 +15,15 @@
 
   <?php require('navbar.php'); ?>
 
-  <?php $var_value = $_GET['id']; ?>;
-
     <div class="container">
+
       <div class="row">
         <div class="col-md-7 mt-4">
           <nav aria-label="Breadcrumb navigation" role="navigation">
             <ol class="breadcrumb links">
               <li class="breadcrumb-item"><a class="link-pagina" href="/">Página Inicial</a></li>
               <li class="breadcrumb-item"><a class="link-pagina" href="/produtos">Produtos</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Nome do Produtoooooooooooooooooooo</li>
+              <li class="breadcrumb-item active" aria-current="page"><?= $produtos[0]->nome?></li>
             </ol>
           </nav>
         </div>
@@ -40,24 +39,10 @@
         
         <div class="col-sm-5 mt-2 colunaDireita">
 
-          <h4>Motocicleta</h4>
-          <h1><b>Harley</b></h1>
+          <h4><?= $produtos[0]->categoria?></h4>
+          <h1><b><?= $produtos[0]->nome?></b></h1>
           <h2 class="mt-5">A partir de</h2>
-          <h3><b>R$53.310</b></h3>
-          <h2 class="mt-5">Escolha a cor: </h2>
-
-              <div class="form-check form-check-inline Opcoes">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="opcao1">
-                  <label class="form-check-label" for="inlineRadio1">Preto</label>
-                </div>
-                <div class="form-check form-check-inline Opcoes">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="opcao2">
-                  <label class="form-check-label" for="inlineRadio2">Branco</label>
-                </div>
-                <div class="form-check form-check-inline Opcoes">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="opcao3">
-                  <label class="form-check-label" for="inlineRadio3">Prata</label>
-                </div>
+          <h3><b>R$<?= $produtos[0]->preco?></b></h3>
                 
                 <button type="button" class="btn btn-warning botao"><b>COMPRAR AGORA</b></button>
                 

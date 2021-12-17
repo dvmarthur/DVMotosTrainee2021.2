@@ -368,3 +368,7 @@ border: whitesmoke !important;
         padding-bottom: 10px;
     }
 }
+
+.navbar {
+    background-color: #070607;
+}

@@ -9,13 +9,9 @@ class ProdutoController
 {
     public function produto()
     {   
-        $produtos = App::get('database') -> select('produtos', '17');
+        $produtos = App::get('database') -> select('produtos', $_GET['id']);
 
-        $tables = [
-            'produtos' => $produtos
-        ];
-
-        return view('/site/produto', $tables);
+        return view('/site/produto', compact('produtos'));
     }
     
     public function show()
