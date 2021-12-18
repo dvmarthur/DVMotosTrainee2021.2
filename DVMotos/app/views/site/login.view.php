@@ -13,7 +13,7 @@
 <body>
   
   <div class="login">      
-        <form class="px-4 py-3" method="POST" action="login/entrar" id="formlogin" name="formlogin">
+        <form class="px-4 py-3" method="POST" action="/login/entrar" id="formlogin" name="formlogin">
           <a class="navbar-brand" href="#">
             <img src="../../../public/assets/moto1.png" class="logo" width="60" height="60" alt="">
           </a>
@@ -29,6 +29,7 @@
           <a href="/" class="btn btn-warning btn-call-to-action ml-5" type="button">Voltar</a>
         </form>
       </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

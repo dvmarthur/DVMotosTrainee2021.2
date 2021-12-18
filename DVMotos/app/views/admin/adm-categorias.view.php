@@ -20,6 +20,7 @@
 
   </head>
   <body>
+  <?php require 'verificarLogin.php' ?>
 
     <!-- navbar -->
 

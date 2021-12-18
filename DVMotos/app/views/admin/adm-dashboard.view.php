@@ -13,8 +13,10 @@
     </head>
 
     <body>
+    <?php require 'verificarLogin.php' ?>
+
         <div class="logout">
-            <a href="login.php">
+            <a href="/login/deslogar">
                 <img class="sair" src="../../../public/img/logout.png" alt="Imagem de logout/sair">
             </a>
         </div>

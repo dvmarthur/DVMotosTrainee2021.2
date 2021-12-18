@@ -26,10 +26,22 @@ class LoginController
         }
 
         else {
-            echo"<script>alert('Usuario ou senha incorretos!');</script>";
+            echo"<script>Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!'
+              })</script>";
             return view('site/login');
 
         }
+    }
+
+    public function deslogar()
+    {
+        session_start();
+        session_destroy();
+
+        return view('site/home');
     }
 
     public function show()
