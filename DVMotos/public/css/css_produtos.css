@@ -127,6 +127,11 @@ body {
         font-size: 12px
     }
 
+    .botao-pesquisa {
+        background-color: #FFCE07 !important;
+        color: white !important;
+    }
+
 /** paginação **/
     .page-link {
         background-color: #070607 !important;

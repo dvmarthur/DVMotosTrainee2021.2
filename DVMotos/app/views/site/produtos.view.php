@@ -33,11 +33,19 @@
               </nav>
             </div>
 
-            <form action="/produtos/pesquisa" method="GET">
-              <div class="col-md-8">
-                <div class="d-flex form-inputs"> <input class="form-control" name="pesquisa" type="text" placeholder="O que você procura?"> <button type="submit"><i class="bx bx-search"></i></button></div>
-              </div>
-            </form>
+            <div class="col-md-8">
+              <form action="/produtos/pesquisa" method="GET">
+                <div class="row">
+                  <div class="col-md-10">
+                    <input type="search" name="pesquisa" class="form-control inputpesquisa" placeholder="Pesquisar...">
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-warning botao-pesquisa" type="submit"><i class="bx bx-search"></i></button>
+                  </div>
+
+                </div>
+              </form>
+            </div>
             
           </div>
         </div>
