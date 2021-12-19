@@ -50,10 +50,8 @@ class ContatoController
 
         if(!$mail->send()) {
             echo "<script>alert('Mensagem não enviada');</script>";
-            //$erro = 'erro: ' . $mail->erro
             echo '<script>alert(Erro inesperado);</script>';
-            //header('Location: /contato');
-            return view('site/contato');
+            header('Location: /contato');;
         } 
         
         else {

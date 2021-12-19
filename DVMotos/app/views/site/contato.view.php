@@ -61,8 +61,9 @@
 
 
       <div class="telefone">
-        <h3>Telefone para contato:<h3> 
-        <h3>(32) 99165-3200</h3>
+        <h3>Telefone para contato:</h3> 
+        <h2>(32) 99165-3200 *</h2>
+        <h2>* Também é o nosso Whatsapp</h2>
       </div>
 
 
