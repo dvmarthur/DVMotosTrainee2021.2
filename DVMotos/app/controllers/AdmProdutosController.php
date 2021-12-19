@@ -28,6 +28,7 @@ class AdmProdutosController
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
             'preco' => $_POST['preco'],
+            'imagem' => $_POST['imagem'],
             'categoria' => $_POST['categoria']
         ];
 
@@ -52,6 +53,7 @@ class AdmProdutosController
             'nome' => $_POST['nome'],
             'descricao' => $_POST['descricao'],
             'preco' => $_POST['preco'],
+            'imagem' => $_POST['imagem'],
             'categoria' => $_POST['categoria']
         ];
         

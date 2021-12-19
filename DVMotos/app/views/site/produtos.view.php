@@ -79,23 +79,28 @@
         <!-- fim dos cards dos produtos -->
 
         <!-- paginação -->
+
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
+          
             <li class="page-item">
-              <a class="page-link link-pagina" href="#" aria-label="Previous">
+              <a class="page-link link-pagina" href="/produtos?page=1" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
                 <span class="sr-only">Anterior</span>
               </a>
             </li>
-            <li class="page-item"><a class="page-link link-pagina" href="#">1</a></li>
-            <li class="page-item"><a class="page-link link-pagina" href="#">2</a></li>
-            <li class="page-item"><a class="page-link link-pagina" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link link-pagina" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-                <span class="sr-only">Próxima</span>
-              </a>
-            </li>
+          
+          <li class="page-item"><a class="page-link link-pagina" href="#">1</a></li>
+          <li class="page-item"><a class="page-link link-pagina" href="#">2</a></li>
+          <li class="page-item"><a class="page-link link-pagina" href="#">3</a></li>
+          
+          <li class="page-item">
+            <a class="page-link link-pagina" href="/produtos?page=3" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Próxima</span>
+            </a>
+          </li>
+
           </ul>
         </nav>
         <!-- fim da paginação -->

@@ -8,7 +8,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <form action="/produtos/create" method="POST">
+        <form action="/produtos/create" method="POST" enctype="multipart/form-data">
           <div class="modal-body">
             <!--Form Modal Adicionar-->
             <div class = "formularioAdicionar">
@@ -27,8 +27,8 @@
               </select>
               <br>
               <div class="form-group">
-                <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                <label for="form-imagem"><h5>Imagem</h5></label>
+                <input type="file" class="form-control-file" id="form-imagem" name="imagem" required>
               </div>
             </div>
           </div>

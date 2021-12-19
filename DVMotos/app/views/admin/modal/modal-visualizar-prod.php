@@ -12,7 +12,7 @@
             <div class="container-fluid">
 
               <div class="row">
-                <img src="../../../public/img/heritage-classic.png" alt="Imagem do produto" class="w-100 rounded">
+                <img src="../../getImagem.php?PicNum=<?= $produto->id?>" alt="Imagem do produto" class="w-100 rounded">
               </div>
 
               <div class="texto-modal">
