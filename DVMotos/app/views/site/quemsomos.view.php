@@ -6,7 +6,7 @@
 
         <meta charset="utf-8">
 		<link rel="stylesheet" href="../../../public/css/viewQuemSomos.css">
-        <link rel="shortcut icon" href="../../../public/assets/favicon-circulo.png">
+        <link rel="shortcut icon" href="../../../public/assets/favicon-circulo2.png">
 
     </head>
 

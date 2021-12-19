@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
       <link rel="stylesheet" href="../../../public/css/admCategoria.css">
-      <link rel="shortcut icon" href="../../../public/assets/favicon-circulo.png">
+      <link rel="shortcut icon" href="../../../public/assets/favicon-circulo2.png">
 
       <script>
         $(document).ready(function(){

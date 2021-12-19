@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
       <link rel="stylesheet" href="../../../public/css/css_produtos.css">
 
-      <link rel="shortcut icon" href="../../../public/assets/favicon-circulo.png">
+      <link rel="shortcut icon" href="../../../public/assets/favicon-circulo2.png">
   </head>
   <body>
 

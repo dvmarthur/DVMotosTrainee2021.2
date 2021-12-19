@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/1e335b449c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../public/css/login.css">
 
-    <link rel="shortcut icon" href="../../../public/assets/favicon-circulo.png">
+    <link rel="shortcut icon" href="../../../public/assets/favicon-circulo2.png">
 </head>
 <body>
   
