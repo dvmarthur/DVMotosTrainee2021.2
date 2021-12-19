@@ -23,3 +23,7 @@ $router->get('adm-dashboard', 'AdmDashboardController@admDashboard');
 $router->get('adm-usuarios', 'AdmUsuariosController@admUser');
 $router->get('adm-categorias', 'AdmCategoriasController@admCategorias');
 $router->get('adm-produtos', 'AdmProdutosController@admProdutos');
+
+$router->post('createCategoria', 'AdmCategoriasController@create');
+$router->post('categorias/update', 'AdmCategoriasController@updateCategorias');
+$router->post('delete', 'AdmCategoriasController@delete');
