@@ -19,7 +19,9 @@
         });
       </script>
   </head>
+  
   <body>
+  <?php require 'verificarLogin.php' ?>
 
     <!-- navbar -->
     <?php require('adm-navbar.view.php'); ?>
@@ -44,175 +46,54 @@
         </section>
         <!-- fim do breadcrumb e busca -->
 
-        <!-- tabela de produtos -->
+      <!-- tabela de usuários -->
 
-        <div class="d-flex justify-content-between align-items-center mb-2 mt-4 mr-4">
-          <h4 class="mt-2 mb-2 header-title"></h4>
-          <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
-            <i class="ri-add-circle-fill"></i> Adicionar Usuário
-          </a>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <table class="table" style="border-collapse: collapse; border-spacing: 0; ">
-              <thead class="thead-dark">
-                <tr>
-                  <th>Nome</th>
-                  <th>Email</th>
-                  <th>Ações</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>User 1</td>
-                  <td>usuario1@email.com</td>
-                  <td>
-                    <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                    <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                    <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>User 2</td>
-                  <td>usuario2@email.com</td>
-                  <td>
-                    <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                    <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                    <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
+      <div class="d-flex   justify-content-between align-items-center mb-2 mt-4 mr-4">
+        <h4 class="mt-2 mb-2 header-title"></h4>
+        <a data-target="#adicionarUsuario"  class="btn btn-warning btn-preto" data-toggle="modal">
+          <i class="ri-add-circle-fill"></i> Adicionar Usuário
+        </a>
         </div>
 
-        <!-- fim da tabela de produtos -->
+      <div class="card">
+        <div class="card-body">
+          <table class="table" style="border-collapse: collapse; border-spacing: 0; ">
+            <thead class="thead-dark">
+              <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
 
-      <!-- paginação -->
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link  link-pagina" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <span class="sr-only">Anterior</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">1</a></li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">2</a></li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link  link-pagina" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Próxima</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- fim da paginação -->
-    </main>
+            <tbody>
+            <?php foreach ($users as $user) : ?>
+            <?php require 'modal-edit-user.php' ?>
 
-
-  <!-- Modal -->
-
-    <!-- Modal Visualizar -->
-    <div class="modal fade" id="visualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Usuário</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-
-              <div class="row">
-                <img src="../../../public/img/heritage-classic.png" alt="Imagem do produto" class="w-100 rounded">
-              </div>
-
-              <div class="texto-modal">
-                <div class="row">
-                    <div class="col-sm-12">
-                    <h3>Nome: </h3>
-                    <p>Usuário Um de Oliveira</p>
-                    </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-12">
-                    <h3>Email: </h3>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-12">
-                    <p>Usuario1@email.com</p>
-                  </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-sm-12">
-                      <h3>Senha: </h3>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <p>123456</p>
-                    </div>
-                  </div>   
-              </div>
-
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-warning btn-amarelo" data-dismiss="modal" data-toggle="modal" data-target="#editarProduto">Editar</button>
-            <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-          </div>
+              <tr>
+                <td><?= $user->id?></td>
+                <td><?= $user->nome?></td>
+                <td><?= $user->email?></td>
+                <td>
+                  <form action="/users/delete" method="POST" id="formDeletar">
+                        <a data-target="#editarUsuario-<?= $user->id ?>" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                          <input type="hidden" value="<?= $user->id ?>" name="id">
+                          <button type="submit" id="completed-task" class="botao_deletar">
+                                <i class="material-icons">&#xE872;</i>
+                          </button>
+                  </form>
+                </td>
+              </tr>
+              <?php endforeach;?>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </div>
 
-    <!-- Modal Editar -->
-    <div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <!--Form Modal Editar-->
-            <div class = "formularioEditar">
-              <input class="form-control" type="text" placeholder="Nome">
-              <br>
-              <input class="form-control" type="text" placeholder="Email">
-              <br>
-              <input class="form-control" type="text" placeholder="Senha">
-              <br>
-
-              <br>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
-            </div>
-            <!--Fim Form Modal Editar-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
-          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-        </div>
-        </div>
-      </div>
-    </div>
+      <!-- fim da tabela de usuários -->
 
     <!-- Modal Adicionar -->
-    <div class="modal fade" id="adicionarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="adicionarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header">
@@ -221,33 +102,40 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="modal-body">
-            <!--Form Modal Adicionar-->
-            <div class = "formularioAdicionar">
-              <input class="form-control" type="text" placeholder="Nome">
-              <br>
-              <input class="form-control" type="text" placeholder="Email">
-              <br>
-              <input class="form-control" type="text" placeholder="Senha">
-              <br>
-              <br>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
-            </div>
-            <!--Fim Form Modal Adicionar-->
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
-          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-        </div>
+
+        <form action="/users/create" method="POST">
+          <div class="modal-body">
+
+              <!--Form Modal Adicionar-->
+              <div class = "formularioAdicionar">
+                <input class="form-control" type="text" name="nome" placeholder="Nome">
+                  <br>
+                  <input class="form-control" type="text" name='email' placeholder="Email">
+                  <br>
+                  <input class="form-control" type="password" name='senha' placeholder="Senha">
+                  <br>
+              </div>
+
+              </div>
+              
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+                <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
+             </div>
+          </form>
+        <!--Fim Form Modal Adicionar-->
         </div>
       </div>
     </div>
     <!-- fim modal -->
+
+    <script src="scripts.js"></script>
+
+    <script>
+        function deletarUsuario() {
+          $('#deletarUsuario').submit();
+        }
+    </script>
 
     <!-- footer -->
 

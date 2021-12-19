@@ -16,29 +16,28 @@
   
   <?php require('navbar.php'); ?>
   <div class="login">      
-        <form class="px-4 py-3">
+        <form class="px-4 py-3" method="POST" action="/login/entrar" id="formlogin" name="formlogin">
           <a class="navbar-brand" href="#">
             <img src="../../../public/assets/moto1.png" class="logo" width="60" height="60" alt="">
           </a>
           <div class="form-group">
-            <label for="exampleDropdownFormEmail1">Endereço de email</label>
-            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@exemplo.com">
+            <label for="login">Endereço de email</label>
+            <input type="email" class="form-control" name="email" id="login" placeholder="email@exemplo.com">
           </div>
           <div class="form-group">
-            <label for="exampleDropdownFormPassword1">Senha</label>
-            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
           </div>
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="dropdownCheck">
-            <label class="form-check-label" for="dropdownCheck">
-              Remember me
-            </label>
-          </div>
-          <a href="#" class="btn btn-warning btn-call-to-action">Entrar</a>
+          <button class="btn btn-warning btn-call-to-action" type="submit">Entrar</button>
+          <a href="/" class="btn btn-warning btn-call-to-action ml-5" type="button">Voltar</a>
         </form>
 
       </div>
+<<<<<<< HEAD
 
+=======
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+>>>>>>> 93037a0d854150e04b7b49a741b4bf456b82f74b
     <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -9,7 +9,9 @@ class AdmCategoriasController
 {
     public function admCategorias()
     {
-        return view('/admin/adm-categorias');
+        $categorias = App::get('database') -> selectAll('categorias');
+
+        return view('/admin/adm-categorias',compact('categorias'));
     }
 
     public function pesquisa()
@@ -29,26 +31,43 @@ class AdmCategoriasController
 
     public function create()
     {
- 
+        $parameters = [
+            'nome' => $_POST['categoryName'],
+        ];
+
+        App::get('database') -> insertCategorias('categorias', $parameters);
+
+        header('location: /adm-categorias');
     }
 
     public function store()
     {
 
+
     }
 
     public function edit()
     {
-  
+
     }
 
-    public function update()
+    public function updateCategorias()
     {
+        $parametros = [
+            'id' => $_POST['id'],
+            'nome' => $_POST['nome']
+        ];
         
+        App::get('database')->edit('categorias', $parametros);
+
+        header('location: /adm-categorias');
     }
 
     public function delete()
     {
+        App::get('database') -> delete('categorias', $_POST['id']);
+
+        header('location: /adm-categorias');
  
     }
 }

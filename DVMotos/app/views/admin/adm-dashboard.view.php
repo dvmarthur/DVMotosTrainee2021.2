@@ -15,10 +15,13 @@
     </head>
 
     <body>
+
+    <?php require 'verificarLogin.php' ?>
+
     <?php require('adm-navbar.view.php'); ?>
 
         <div class="logout">
-            <a href="login">
+            <a href="/login/deslogar">
                 <img class="sair" src="../../../public/img/logout.png" alt="Imagem de logout/sair">
             </a>
         </div>
@@ -44,7 +47,7 @@
             </div>
 
             <div class="cartao" style="width: 18rem;">
-                <a href="/adm-usuarios">
+                <a href="/adm-user">
                     <img class="card-img-top" src="../../../public/img/usuario.png" alt="Imagem de vários usuários">
                 </a>
                 <div class="card-body">

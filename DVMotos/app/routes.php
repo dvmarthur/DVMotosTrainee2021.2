@@ -13,9 +13,7 @@ use App\Controllers\AdmProdutosController;
 
 
 $router->get('','HomeController@index');
-$router->get('quem-somos', 'QuemSomosController@index');
-$router->get('contato', 'ContatoController@contato');
-$router->get('login', 'LoginController@login');
+$router->get('quemsomos', 'QuemSomosController@index');
 $router->get('produtos', 'ProdutosController@produtos');
 $router->get('produto', 'ProdutoController@produto');
 
@@ -32,3 +30,17 @@ $router->get('produtos/pesquisa', 'ProdutosController@pesquisa');
 $router->get('adm-produtos/pesquisa', 'AdmProdutosController@pesquisa');
 $router->get('adm-categorias/pesquisa', 'AdmCategoriasController@pesquisa');
 $router->get('adm-user/pesquisa', 'AdmUsuariosController@pesquisa');
+$router->post('users/create', 'AdmUsuariosController@createUsers');
+$router->post('users/update', 'AdmUsuariosController@updateUsers');
+$router->post('users/delete', 'AdmUsuariosController@delete');
+
+$router->get('login', 'LoginController@login');
+$router->post('login/entrar', 'LoginController@entrar');
+$router->get('login/deslogar', 'LoginController@deslogar');
+
+$router->get('contato', 'ContatoController@contato');
+$router->post('contato/disparar', 'ContatoController@sendEmail');
+$router->post('createCategoria', 'AdmCategoriasController@create');
+$router->post('categorias/update', 'AdmCategoriasController@updateCategorias');
+$router->post('delete', 'AdmCategoriasController@delete');
+ 

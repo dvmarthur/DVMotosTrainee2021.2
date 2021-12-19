@@ -21,6 +21,7 @@
 
   </head>
   <body>
+  <?php require 'verificarLogin.php' ?>
 
     <!-- navbar -->
     <?php require('adm-navbar.view.php'); ?>
@@ -55,157 +56,48 @@
 
         <!-- Tabela de Categorias -->
 
-        <div class="d-flex justify-content-between align-items-center mb-2 mt-4 mr-4">
-          <h4 class="mt-2 mb-2 header-title"></h4>
-          <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
-            <i class="ri-add-circle-fill"></i> Adicionar Categoria
-          </a>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <table class="table" style="border-collapse: collapse; border-spacing: 0; ">
-              <thead class="thead-dark">
-                <tr>
-                  <th>Categoria</th>
-                  <th>Descrição</th>
-                  <th>Ações</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Esportiva</td>
-                  <td>Essas motos, participam de campeonatos de alta velocidade, com motores que ultrapassam as 1200 cilindradas.</td>
-                  <td>
-                    <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                    <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                    <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Esportiva</td>
-                  <td>Essas motos, participam de campeonatos de alta velocidade, com motores que ultrapassam as 1200 cilindradas.</td>
-                  <td>
-                    <a data-target="#visualizarProduto" class="view" title="Visualizar" data-toggle="modal"><i class="material-icons">&#xE417;</i></a>
-                    <a data-target="#editarProduto" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
-                    <a href="#" class="delete" title="Deletar" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                  </td>
-                </tr>
+      <div class="d-flex justify-content-between align-items-center mb-2 mt-4 mr-4">
+        <h4 class="mt-2 mb-2 header-title"></h4>
+        <a data-target="#adicionarCategoria"  class="btn btn-warning btn-preto" data-toggle="modal">
+          <i class="ri-add-circle-fill"></i> Adicionar Categoria
+        </a>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <table class="table" style="border-collapse: collapse; border-spacing: 0; ">
+            <thead class="thead-dark">
+              <tr>
+                <th>Categoria</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+            <?php foreach($categorias as $categoria):?> 
+            <?php require 'modal-edit-categorias.php'?>
+            <tr>
+                <td><?= $categoria->nome?></td>
+              
+                <td>
+                <form action="delete" method="POST">
+                <a data-target="#editarCategoria-<?= $categoria->id ?>" class="edit" title="Editar" data-toggle="modal"><i class="material-icons">&#xE254;</i></a>
+                      <input type="hidden" value="<?= $categoria->id ?>" name="id">
+                      <button type="submit" id="completed-task" class="botao_deletar">
+                                <i class="material-icons">&#xE872;</i>
+                          </button>
+                    </form>
+                </td>
+              </tr>
+              <?php endforeach;?>
 
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Fim da tabela de categorias -->
-
-      <!-- Paginação -->
-
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item">
-            <a class="page-link link-pagina" href="#" aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-              <span class="sr-only">Anterior</span>
-            </a>
-          </li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">1</a></li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">2</a></li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link link-pagina" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Próxima</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- Fim da paginação -->
-    </main>
-
-  <!-- Modal -->
-
-    <!-- Modal Visualizar -->
-
-    <!-- Modal Visualizar -->
-    <div class="modal fade" id="visualizarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Categoria</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-
-              <div class="row">
-                <img src="../../public/img/esportiva.png" alt="Imagem do produto" class="w-100 rounded">
-              </div>
-
-              <div class="texto-modal">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <h3>Preço Médio: </h3>
-                    <p>R$80.000,00</p>
-                  </div>
-                  <div class="col-sm-6">
-                    <h3>Categoria: </h3>
-                    <p>Motocicleta Esportiva</p>
-                  </div>
-                </div>           
-              </div>
-
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-warning btn-amarelo" data-dismiss="modal" data-toggle="modal" data-target="#editarProduto">Editar</button>
-            <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-          </div>
+            </tbody>
+          </table>
         </div>
       </div>
-    </div>
 
-    <!-- Modal Editar -->
-    <div class="modal fade" id="editarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Editar Categoria</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
+      <!-- Fim da tabela de categorias -->
 
-            <!--Form Modal Editar-->
-
-            <div class = "formularioEditar">
-              <input class="form-control" type="text" placeholder="Nome da Categoria">
-              <br>
-              <input class="form-control" type="text" placeholder="Descrição">
-              <br>
-              <input class="form-control" type="text" placeholder="Preço Médio">
-              <br>
-              <br>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
-            </div>
-
-            <!--Fim Form Modal Editar-->
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
-          <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
-        </div>
-        </div>
-      </div>
-    </div>
+   
+    <!-- Fim da paginação -->
 
     <!-- Modal Adicionar -->
 
@@ -217,34 +109,27 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
             <span aria-hidden="true">&times;</span>
             </button>
-        </div>
+        </div>       
         <div class="modal-body">
+
 
             <!--Form Modal Adicionar-->
 
             <div class = "formularioAdicionar">
-              <input class="form-control" type="text" placeholder="Nome da Categoria">
+            <form action="createCategoria" method="POST">
+              <input class="form-control" type="text" name="categoryName" placeholder="Nome da Categoria">
               <br>
-              <input class="form-control" type="text" placeholder="Descrição">
-              <br>
-              <input class="form-control" type="text" placeholder="Preço Médio">
-              <br>
-              <form>
-                <div class="form-group">
-                  <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
-              </form>
             </div>
 
             <!--Fim Form Modal Adicionar-->
             
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning btn-amarelo">Salvar mudanças</button>
+          <button class="btn btn-warning btn-amarelo" type="submit">Salvar mudanças</button>
           <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>
         </div>
         </div>
+        </form>
       </div>
     </div>
 

@@ -89,8 +89,8 @@
 
       <div class="col-sm my-3 d-flex justify-content-center call-to-action">
         <div class="card-body">
-          <h3>CONHEÇA MAIS SOBRE NOSSA EMPRESA!</h3>
-          <a href="/quem-somos" class="btn btn-warning btn-call-to-action">QUEM SOMOS</a>
+          <h3>CONHEÇA MAIS SOBRE NOSSA EMPRESA</h3>
+          <a href="/quemsomos" class="btn btn-warning btn-call-to-action">QUEM SOMOS</a>
         </div>
       </div>
     </div>

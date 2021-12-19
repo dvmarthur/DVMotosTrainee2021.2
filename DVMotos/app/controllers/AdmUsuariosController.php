@@ -9,7 +9,13 @@ class AdmUsuariosController
 {
     public function admUser()
     {
-        return view('/admin/adm-user');
+        $users = App::get('database') -> selectAll('users');
+
+        $table = [
+            'users' => $users
+        ];
+
+        return view('admin/adm-user', $table);
     }
 
     public function pesquisa()
@@ -27,9 +33,16 @@ class AdmUsuariosController
         
     }
 
-    public function create()
+    public function createUsers()
     {
- 
+        $parametros = [
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => hash("sha512", $_POST['senha'])
+        ];
+
+        App::get('database') -> insertUsuarios('users', $parametros);
+        header('Location: /adm-user');
     }
 
     public function store()
@@ -37,18 +50,22 @@ class AdmUsuariosController
 
     }
 
-    public function edit()
+    public function updateUsers()
     {
-  
-    }
+        $parametros = [
+            'id' => $_POST['id'],
+            'nome' => $_POST['nome'],
+            'email' => $_POST['email'],
+            'senha' => $_POST['senha']
+        ];
 
-    public function update()
-    {
-        
+        App::get('database')->edit('users', $parametros);
+        header('Location: /adm-user');
     }
 
     public function delete()
     {
- 
+        App::get('database')->delete('users', $_POST['id']);
+        header('Location: /adm-user');
     }
 }

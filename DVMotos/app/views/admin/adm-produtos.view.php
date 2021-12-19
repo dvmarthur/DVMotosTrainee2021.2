@@ -15,6 +15,7 @@
 
   </head>
   <body>
+  <?php require 'verificarLogin.php' ?>
 
     <!-- navbar -->
     <?php require('adm-navbar.view.php'); ?>

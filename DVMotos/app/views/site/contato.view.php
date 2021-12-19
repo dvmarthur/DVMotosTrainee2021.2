@@ -13,10 +13,9 @@
     </head>
 
     <body>
-
       <?php require('navbar.php'); ?>
 
-      <div class = "conteudo-pagina">
+      <div class="conteudo-pagina">
         <div class="instrucoes">
           <h1>Contato</h1>
           <p>Como entrar em contato com a nossa equipe? Preencha os campos seguintes, sua resposta chegará antes do que você imagina!</p>
@@ -25,46 +24,50 @@
               
         
         <div class="entrar-contato">
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Nome" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Nome</label>
-          </div>
-    
-    
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="E-mail" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">E-mail</label>
-          </div>
-    
-    
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Assunto" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Assunto</label>
-          </div>
-    
-    
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Mensagem" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Mensagem</label>
-          </div>
-    
-    
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Telefone" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Telefone</label>
-          </div>
+          <form method="POST" action="/contato/disparar">
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Nome" name="nome" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Nome</label>
+            </div>
+      
+      
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="E-mail" name="email" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">E-mail</label>
+            </div>
+      
+      
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Assunto" name="assunto" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Assunto</label>
+            </div>
+      
+      
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Mensagem" name="mensagem" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Mensagem</label>
+            </div>
+      
+      
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Telefone" name="telefone" id="floatingTextarea"></textarea>
+              <label for="floatingTextarea">Telefone</label>
+            </div>
+              <button class="btn btn-warning btn-call-to-action" type="submit">Enviar</button>
+          </form>
         </div>
 
 
-        <div class="mapa">
-          <h1>Onde estamos</h1>
-          <iframe class="local" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.0559566221455!2d-43.37300671602066!3d-21.778095246070144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b9fc81b22cb%3A0x5f6adc6fc7d3f365!2sInstituto%20de%20Ci%C3%AAncias%20Exatas%20-%20Pr%C3%A9dio%20Antigo%20-%20Bloco%20%C3%9Anico!5e0!3m2!1spt-BR!2sbr!4v1635468199228!5m2!1spt-BR!2sbr" width="500px" height="450px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
+          <div class="mapa">
+            <h1>Onde estamos</h1>
+            <iframe class="local" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.0559566221455!2d-43.37300671602066!3d-21.778095246070144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b9fc81b22cb%3A0x5f6adc6fc7d3f365!2sInstituto%20de%20Ci%C3%AAncias%20Exatas%20-%20Pr%C3%A9dio%20Antigo%20-%20Bloco%20%C3%9Anico!5e0!3m2!1spt-BR!2sbr!4v1635468199228!5m2!1spt-BR!2sbr" width="500px" height="450px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
 
 
         <div class="telefone">
-          <h3>Telefone para contato:<h3> 
-          <h3>(XX) XXXXX-XXXX</h3>
+          <h3>Telefone para contato:</h3> 
+          <h2>(32) 99165-3200 *</h2>
+          <h2>* Também é o nosso Whatsapp</h2>
         </div>
       </div>
 
