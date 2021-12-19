@@ -20,7 +20,7 @@
         <a href="/adm-dashboard">Home</a>
         <a href="./adm-produtos">Produtos</a>
         <a href="./adm-categorias">Categorias</a>
-        <a href="./adm-usuarios">Usuários</a>
+        <a href="./adm-user">Usuários</a>
       </div>
     </nav>
 
