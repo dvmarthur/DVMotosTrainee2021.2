@@ -54,7 +54,7 @@
 
       <div class="d-flex justify-content-between align-items-center mb-2 mt-4 mr-4">
         <h4 class="mt-2 mb-2 header-title"></h4>
-        <a data-target="#adicionarProduto"  class="btn btn-warning btn-preto" data-toggle="modal">
+        <a data-target="#adicionarCategoria"  class="btn btn-warning btn-preto" data-toggle="modal">
           <i class="ri-add-circle-fill"></i> Adicionar Categoria
         </a>
       </div>

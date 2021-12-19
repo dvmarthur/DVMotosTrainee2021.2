@@ -24,7 +24,7 @@
         <div class="miniatura">
 
             <div class="cartao" style="width: 18rem;">
-                <a href="adm-produtos.php">
+                <a href="/adm-produtos">
                     <img class="card-img-top" src="../../../public/img/renovador.png" alt="Imagem de uma moto com um produto">
                 </a>
                 <div class="card-body">
@@ -33,7 +33,7 @@
             </div>
 
             <div class="cartao" style="width: 18rem;">
-                <a href="categorias.php">
+                <a href="/adm-categorias">
                     <img class="card-img-top" src="../../../public/img/categoria.png" alt="Imagem de vários modelos de moto">
                 </a>
                 <div class="card-body">
@@ -42,7 +42,7 @@
             </div>
 
             <div class="cartao" style="width: 18rem;">
-                <a href="adm-user.php">
+                <a href="/adm-user">
                     <img class="card-img-top" src="../../../public/img/usuario.png" alt="Imagem de vários usuários">
                 </a>
                 <div class="card-body">
