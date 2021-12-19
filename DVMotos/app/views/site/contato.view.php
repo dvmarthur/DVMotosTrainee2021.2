@@ -62,7 +62,7 @@
 
       <div class="telefone">
         <h3>Telefone para contato:<h3> 
-        <h3>(XX) XXXXX-XXXX</h3>
+        <h3>(32) 99165-3200</h3>
       </div>
 
 
