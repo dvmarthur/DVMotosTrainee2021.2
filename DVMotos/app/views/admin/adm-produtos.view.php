@@ -11,6 +11,8 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="../../../public/css/css_adm_produtos.css">
 
+      <link rel="shortcut icon" href="../../../public/assets/favicon-circulo.png">
+
   </head>
   <body>
 
