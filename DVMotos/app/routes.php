@@ -32,3 +32,6 @@ $router->get('login/deslogar', 'LoginController@deslogar');
 
 $router->get('contato', 'ContatoController@contato');
 $router->post('contato/disparar', 'ContatoController@sendEmail');
+$router->post('createCategoria', 'AdmCategoriasController@create');
+$router->post('categorias/update', 'AdmCategoriasController@updateCategorias');
+$router->post('delete', 'AdmCategoriasController@delete');
