@@ -12,7 +12,15 @@ class AdmUsuariosController
         return view('/admin/adm-user');
     }
 
-
+    public function pesquisa()
+    {
+        $pesquisa = $_GET['pesquisa'];
+        $produtos = App::get('database') -> pesquisa('user', $pesquisa);
+        $tables = [
+            'produtos' => $produtos
+        ];
+        return view('/site/adm-users', $tables);
+    }
     
     public function show()
     {

@@ -36,6 +36,16 @@ class AdmProdutosController
         header('Location: /adm-produtos');
     }
 
+    public function pesquisa()
+    {
+        $pesquisa = $_GET['pesquisa'];
+        $produtos = App::get('database') -> pesquisa('produtos', $pesquisa);
+        $tables = [
+            'produtos' => $produtos
+        ];
+        return view('/site/adm-produtos', $tables);
+    }
+
     public function store()
     {
 
@@ -65,5 +75,11 @@ class AdmProdutosController
     {
         App::get('database')->delete('produtos', $_POST['id']);
         header('Location: /adm-produtos');
+    }
+
+    public function getImagem()
+    {
+        
+        Header( "Content-type: image/gif");
     }
 }

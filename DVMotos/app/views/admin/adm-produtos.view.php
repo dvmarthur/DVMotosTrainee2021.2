@@ -60,6 +60,7 @@
                   <th>Ações</th>
                 </tr>
               </thead>
+
               <tbody>
                 <?php foreach ($produtos as $produto) : ?>
 

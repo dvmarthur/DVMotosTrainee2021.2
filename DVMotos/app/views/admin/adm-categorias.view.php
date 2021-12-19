@@ -40,9 +40,11 @@
                 </nav>
               </div>
 
+              <form action="/adm-categorias/pesquisa" method="GET">
               <div class="col-md-8">
-                  <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Digite o nome da categoria"> <i class="bx bx-search"></i> </div>
+                  <div class="d-flex form-inputs"> <input class="form-control" name="pesquisa" type="text" placeholder="Digite o nome da categoria"> <button type="submit"> <i class="bx bx-search"></i> </button></div>
               </div>
+              </form>
 
             </div>
           </div>

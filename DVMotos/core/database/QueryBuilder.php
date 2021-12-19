@@ -128,4 +128,23 @@ class QueryBuilder
     {
       
     }
+
+    public function pesquisa($table, $parametro)
+    {
+        if ($table == 'produtos') {
+            $sql = "SELECT * FROM {$table} WHERE `nome` LIKE '%{$parametro}%' OR `categoria` LIKE '%{$parametro}%'";
+        } else {
+            $sql = "SELECT * FROM {$table} WHERE `nome` LIKE '%{$parametro}%'";
+        }
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 }

@@ -16,6 +16,16 @@ class ProdutosController
         ];
         return view('/site/produtos', $tables);
     }
+
+    public function pesquisa()
+    {
+        $pesquisa = $_GET['pesquisa'];
+        $produtos = App::get('database') -> pesquisa('produtos', $pesquisa);
+        $tables = [
+            'produtos' => $produtos
+        ];
+        return view('/site/produtos', $tables);
+    }
     
     public function show()
     {

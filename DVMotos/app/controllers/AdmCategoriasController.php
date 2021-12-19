@@ -11,6 +11,16 @@ class AdmCategoriasController
     {
         return view('/admin/adm-categorias');
     }
+
+    public function pesquisa()
+    {
+        $pesquisa = $_GET['pesquisa'];
+        $categorias = App::get('database') -> pesquisa('categorias', $pesquisa);
+        $tables = [
+            'categorias' => $categorias
+        ];
+        return view('/admin/adm-categorias', $tables);
+    }
     
     public function show()
     {

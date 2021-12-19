@@ -27,3 +27,8 @@ $router->get('adm-produtos', 'AdmProdutosController@admProdutos');
 $router->post('produtos/create', 'AdmProdutosController@createProduto');
 $router->post('produtos/update', 'AdmProdutosController@updateProduto');
 $router->post('produtos/delete', 'AdmProdutosController@delete');
+
+$router->get('produtos/pesquisa', 'ProdutosController@pesquisa');
+$router->get('adm-produtos/pesquisa', 'AdmProdutosController@pesquisa');
+$router->get('adm-categorias/pesquisa', 'AdmCategoriasController@pesquisa');
+$router->get('adm-user/pesquisa', 'AdmUsuariosController@pesquisa');
