@@ -20,7 +20,7 @@ $router->get('produtos', 'ProdutosController@produtos');
 $router->get('produto', 'ProdutoController@produto');
 
 $router->get('adm-dashboard', 'AdmDashboardController@admDashboard');
-$router->get('adm-usuarios', 'AdmUsuariosController@admUser');
+$router->get('adm-user', 'AdmUsuariosController@admUser');
 $router->get('adm-categorias', 'AdmCategoriasController@admCategorias');
 $router->get('adm-produtos', 'AdmProdutosController@admProdutos');
 
