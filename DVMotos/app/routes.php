@@ -13,8 +13,7 @@ use App\Controllers\AdmProdutosController;
 
 
 $router->get('','HomeController@index');
-$router->get('quem-somos', 'QuemSomosController@index');
-$router->get('contato', 'ContatoController@contato');
+$router->get('quemsomos', 'QuemSomosController@index');
 $router->get('produtos', 'ProdutosController@produtos');
 $router->get('produto', 'ProdutoController@produto');
 
@@ -30,3 +29,6 @@ $router->post('users/delete', 'AdmUsuariosController@delete');
 $router->get('login', 'LoginController@login');
 $router->post('login/entrar', 'LoginController@entrar');
 $router->get('login/deslogar', 'LoginController@deslogar');
+
+$router->get('contato', 'ContatoController@contato');
+$router->post('contato/disparar', 'ContatoController@sendEmail');

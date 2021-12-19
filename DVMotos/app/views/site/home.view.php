@@ -110,14 +110,14 @@
       <div class="col-sm my-3 d-flex justify-content-center call-to-action">
         <div class="card-body">
           <h3>FALE COM A GENTE!</h3>
-          <a href="contatos.php" class="btn btn-warning btn-call-to-action">CONTATO</a>
+          <a href="/contato" class="btn btn-warning btn-call-to-action">CONTATO</a>
         </div>
       </div>
 
       <div class="col-sm my-3 d-flex justify-content-center call-to-action">
         <div class="card-body">
           <h3>CONHEÇA MAIS SOBRE NOSSA EMPRESA</h3>
-          <a href="quemsomos.php" class="btn btn-warning btn-call-to-action">QUEM SOMOS</a>
+          <a href="/quemsomos" class="btn btn-warning btn-call-to-action">QUEM SOMOS</a>
         </div>
       </div>
     </div>

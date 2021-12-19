@@ -11,6 +11,7 @@
     </head>
 
     <body>
+      
       <div class="instrucoes">
         <h1>Contato</h1>
         <p>Como entrar em contato com a nossa equipe? Preencha os campos seguintes, sua resposta chegará antes do que você imagina!</p>
@@ -19,34 +20,37 @@
             
       
       <div class="entrar-contato">
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Nome" id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">Nome</label>
-        </div>
-  
-  
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="E-mail" id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">E-mail</label>
-        </div>
-  
-  
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Assunto" id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">Assunto</label>
-        </div>
-  
-  
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Mensagem" id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">Mensagem</label>
-        </div>
-  
-  
-        <div class="form-floating">
-          <textarea class="form-control" placeholder="Telefone" id="floatingTextarea"></textarea>
-          <label for="floatingTextarea">Telefone</label>
-        </div>
+        <form method="POST" action="/contato/disparar">
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Nome" name="nome" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Nome</label>
+          </div>
+    
+    
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="E-mail" name="email" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">E-mail</label>
+          </div>
+    
+    
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Assunto" name="assunto" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Assunto</label>
+          </div>
+    
+    
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Mensagem" name="mensagem" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Mensagem</label>
+          </div>
+    
+    
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Telefone" name="telefone" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">Telefone</label>
+          </div>
+            <button class="btn btn-warning btn-call-to-action" type="submit">Enviar</button>
+        </form>
       </div>
 
 

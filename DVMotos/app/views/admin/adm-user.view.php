@@ -105,7 +105,7 @@
                   <br>
                   <input class="form-control" type="text" name='email' placeholder="Email">
                   <br>
-                  <input class="form-control" type="text" name='senha' placeholder="Senha">
+                  <input class="form-control" type="password" name='senha' placeholder="Senha">
                   <br>
               </div>
 
