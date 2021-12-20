@@ -36,7 +36,7 @@
               <br>
                 <div class="form-group">
                   <label for="exampleFormControlFile1"><h5>Imagem</h5></label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  <input type="file" value="<?=$produto->imagem?>" class="form-control-file" name="imagem" id="exampleFormControlFile1">
                 </div>
             </div>
             <!--Fim Form Modal Editar-->
