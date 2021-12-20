@@ -15,6 +15,7 @@
 <body>
   
   <?php require('navbar.php'); ?>
+  
   <div class="login">      
         <form class="px-4 py-3" method="POST" action="/login/entrar" id="formlogin" name="formlogin">
           <a class="navbar-brand" href="#">
@@ -28,17 +29,15 @@
             <label for="senha">Senha</label>
             <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha">
           </div>
-          <button class="btn btn-warning btn-call-to-action" type="submit">Entrar</button>
-          <a href="/" class="btn btn-warning btn-call-to-action ml-5" type="button">Voltar</a>
+
+              <button class="btn btn-warning btn-call-to-action" type="submit">Entrar</button>
+            
         </form>
 
       </div>
-<<<<<<< HEAD
 
-=======
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
->>>>>>> 93037a0d854150e04b7b49a741b4bf456b82f74b
     <script src="scripts.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

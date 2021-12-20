@@ -44,7 +44,7 @@ class QueryBuilder
         }
     }
 
-    public function insert($table, $parametros)
+    public function insertProduto($table, $parametros)
     {
 
         $imagem = $_FILES['imagem'];
@@ -81,6 +81,33 @@ class QueryBuilder
         }
     }
 
+    public function insertUsuarios($table, $parametros)
+    {
+        $sql= "INSERT INTO users(nome, email, senha) VALUES ('{$parametros['nome']}','{$parametros['email']}','{$parametros['senha']}')";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function insertCategorias($tables, $parametros)
+    {
+        $sql = "INSERT INTO {$tables} (nome) values ('{$parametros['nome']}')";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
 
     public function edit($table , $parametros)
     {
@@ -105,9 +132,7 @@ class QueryBuilder
         } catch (Exception $e) {
             die($e->getMessage());
         }
-
     }
-
 
     public function delete($table, $id)
     {
@@ -124,11 +149,6 @@ class QueryBuilder
         }
     }
 
-    public function read()
-    {
-      
-    }
-
     public function pesquisa($table, $parametro)
     {
         if ($table == 'produtos') {
@@ -140,6 +160,37 @@ class QueryBuilder
         try {
             $stmt = $this->pdo->prepare($sql);
 
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function logar($table, $email, $senha)
+    {
+        $sql = "select 'email' from {$table} where email='{$email}'and senha='{$senha}'";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } 
+
+        catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function paginacao($limite)
+    {
+        $sql = "SELECT * FROM produtos LIMIT {$limite}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);

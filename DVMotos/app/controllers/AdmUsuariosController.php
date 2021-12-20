@@ -21,7 +21,7 @@ class AdmUsuariosController
     public function pesquisa()
     {
         $pesquisa = $_GET['pesquisa'];
-        $produtos = App::get('database') -> pesquisa('user', $pesquisa);
+        $produtos = App::get('database') -> pesquisa('users', $pesquisa);
         $tables = [
             'produtos' => $produtos
         ];

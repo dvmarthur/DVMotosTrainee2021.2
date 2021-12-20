@@ -10,7 +10,7 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-      <link rel="stylesheet" href="../../../public/css/admCategoria.css">
+      <link rel="stylesheet" href="../../../public/css/css_adm_produtos.css">
       <link rel="shortcut icon" href="../../../public/assets/favicon-circulo2.png">
 
       <script>
@@ -21,7 +21,8 @@
 
   </head>
   <body>
-  <?php require 'verificarLogin.php' ?>
+
+    <?php require 'verificarLogin.php' ?>
 
     <!-- navbar -->
     <?php require('adm-navbar.view.php'); ?>
@@ -42,11 +43,18 @@
                 </nav>
               </div>
 
-              <form action="/adm-categorias/pesquisa" method="GET">
               <div class="col-md-8">
-                  <div class="d-flex form-inputs"> <input class="form-control" name="pesquisa" type="text" placeholder="Digite o nome da categoria"> <button type="submit"> <i class="bx bx-search"></i> </button></div>
+                <form action="/adm-categorias/pesquisa" method="GET">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <input type="search" name="pesquisa" class="form-control inputpesquisa" placeholder="Pesquisar...">
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-warning botao-pesquisa" type="submit"><i class="bx bx-search"></i></button>
+                    </div>
+                  </div>
+                </form>
               </div>
-              </form>
 
             </div>
           </div>
@@ -73,7 +81,8 @@
             </thead>
             <tbody>
             <?php foreach($categorias as $categoria):?> 
-            <?php require 'modal-edit-categorias.php'?>
+              <?php require 'modal-edit-categorias.php'?>
+
             <tr>
                 <td><?= $categoria->nome?></td>
               
@@ -101,7 +110,7 @@
 
     <!-- Modal Adicionar -->
 
-    <div class="modal fade" id="adicionarProduto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="adicionarCategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
         <div class="modal-header">

@@ -37,7 +37,16 @@
               </div>
 
               <div class="col-md-8">
-                  <div class="d-flex form-inputs"> <input class="form-control" type="text" placeholder="Digite o nome do produto"> <i class="bx bx-search"></i> </div>
+                <form action="/adm-produtos/pesquisa" method="GET">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <input type="search" name="pesquisa" class="form-control inputpesquisa" placeholder="Pesquisar...">
+                    </div>
+                    <div class="col-md-2">
+                      <button class="btn btn-warning botao-pesquisa" type="submit"><i class="bx bx-search"></i></button>
+                    </div>
+                  </div>
+                </form>
               </div>
 
             </div>

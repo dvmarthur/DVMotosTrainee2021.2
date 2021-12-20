@@ -39,9 +39,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="/contato">Contato</a>
-                <a class="dropdown-item" href="/quem-somos">Quem Somos</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Algo mais aqui</a>
+                <a class="dropdown-item" href="/quemsomos">Quem Somos</a>
               </div>
             </li>
             <li class="nav-item">

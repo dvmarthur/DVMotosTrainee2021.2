@@ -18,9 +18,9 @@
           <img src="../../../public/assets/png3.png" class="logo" width="120" height="120" alt="">
         </a>
         <a href="/adm-dashboard">Home</a>
-        <a href="./adm-produtos">Produtos</a>
-        <a href="./adm-categorias">Categorias</a>
-        <a href="./adm-user">Usuários</a>
+        <a href="/adm-produtos">Produtos</a>
+        <a href="/adm-categorias">Categorias</a>
+        <a href="/adm-user">Usuários</a>
       </div>
     </nav>
 

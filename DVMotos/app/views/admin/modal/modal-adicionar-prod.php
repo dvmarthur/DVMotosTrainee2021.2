@@ -19,16 +19,16 @@
               <input class="form-control" type="text" name="preco" placeholder="Preço">
               <br>
               <select class="form-control" id="exampleFormControlSelect1" name="categoria">
-                <option value="motocicleta">Motocicleta</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+                
+                <option selected>Selecione uma categoria</option>
+                <?php foreach($categorias as $categoria) : ?>
+                  <option value="<?=$categoria->nome?>"><?=$categoria->nome?></option>
+                <?php endforeach; ?>
               </select>
               <br>
               <div class="form-group">
                 <label for="form-imagem"><h5>Imagem</h5></label>
-                <input type="file" class="form-control-file" id="form-imagem" name="imagem" required>
+                <input type="file" class="form-control-file" id="form-imagem" name="imagem">
               </div>
             </div>
           </div>

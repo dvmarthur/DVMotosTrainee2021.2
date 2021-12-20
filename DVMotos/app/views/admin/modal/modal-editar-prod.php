@@ -21,12 +21,17 @@
               <br>
               <input class="form-control" type="text" name="preco" value="<?= $produto->preco ?>" placeholder="<?= $produto->preco ?>">
               <br>
-              <select class="form-control" name="categoria" id="exampleFormControlSelect1">
-                <option>Motocicleta</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+              <select class="form-control" id="exampleFormControlSelect1" name="categoria"> 
+                <!-- <option>Selecione uma opção</option> -->
+                <?php foreach($categorias as $categoria) : ?>
+                  <script>
+                    if (<?php $categoria->nome == $produto->categoria?>) {
+                      var country = document.getElementById("<?php $categoria->nome?>");
+                      country.options[country.options.selectedIndex].selected = true;
+                    }
+                  </script>
+                  <option value="<?=$categoria->nome?>" id="<?php $categoria->nome?>"><?=$categoria->nome?></option>
+                <?php endforeach; ?>
               </select>
               <br>
                 <div class="form-group">

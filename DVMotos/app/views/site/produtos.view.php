@@ -42,7 +42,6 @@
                   <div class="col-md-2">
                     <button class="btn btn-warning botao-pesquisa" type="submit"><i class="bx bx-search"></i></button>
                   </div>
-
                 </div>
               </form>
             </div>
@@ -73,7 +72,7 @@
         <!-- cards produtos -->
 
         <div class="row justify-content-between geral-produtos">
-            <?php foreach ($produtos as $produto) : ?>
+            <?php foreach ($produtos_paginacao as $produto) : ?>
             <div class="col-sm my-3 d-flex justify-content-center">
               <div class="card" style="width: 18rem;">
                 <img src="../../../public/img/img_card.jpg" class="card-img-top" alt="Produto">
@@ -94,24 +93,30 @@
 
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
-          
+              
+            <?php 
+              $total_paginas = ceil($total_paginas);
+              $pagina_anterior = $pagina - 1;
+              $proxima_pagina = $pagina + 1;
+            ?>
+
             <li class="page-item">
-              <a class="page-link link-pagina" href="/produtos?page=1" aria-label="Previous">
+              <a class="page-link link-pagina" href="/produtos?pagina=<?php echo $pagina_anterior ?>" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
                 <span class="sr-only">Anterior</span>
               </a>
             </li>
-          
-          <li class="page-item"><a class="page-link link-pagina" href="#">1</a></li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">2</a></li>
-          <li class="page-item"><a class="page-link link-pagina" href="#">3</a></li>
-          
-          <li class="page-item">
-            <a class="page-link link-pagina" href="/produtos?page=3" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-              <span class="sr-only">Próxima</span>
-            </a>
-          </li>
+
+            <?php for ($i = 1; $i < $total_paginas + 1; $i++) { ?>
+              <li class="page-item"> <a class="page-link link-pagina" href="/produtos?pagina=<?php echo $i ?>"> <?php echo $i ?> </a></li>
+            <?php } ?>
+
+            <li class="page-item">
+              <a class="page-link link-pagina" href="/produtos?pagina=<?php echo $proxima_pagina ?>" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Próxima</span>
+              </a>
+            </li>
 
           </ul>
         </nav>
