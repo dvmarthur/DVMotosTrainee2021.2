@@ -35,6 +35,10 @@ class AdmProdutosController
             'categoria' => $_POST['categoria']
         ];
 
+        // foreach ($_POST as $postKey => $postValor) {
+        //     $parametros["$postKey"] = $postValor;
+        // }
+
         App::get('database') -> insertProduto('produtos', $parametros);
         header('Location: /adm-produtos');
     }

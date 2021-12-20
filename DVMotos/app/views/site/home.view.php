@@ -50,7 +50,7 @@
 
     <!-- cards últimos produtos -->
 
-    <h2 class="text-center my-3">ÚLTIMOS PRODUTOS</h2>
+    <h2 class="text-center my-3">DESTAQUES</h2>
 
     <div class="row justify-content-between">
 
@@ -59,7 +59,7 @@
       <?php if(++$i > 4) break; ?>
       <div class="col-sm my-3 d-flex justify-content-center">
         <div class="card" style="width: 18rem;">
-          <img src="../../../public/img/img_card.jpg" class="card-img-top" alt="Produto">
+          <img src="../../public/produtos/<?= $produto->imagem?>" class="card-img-top" alt="Produto">
           <div class="card-body">
             <p class="card-text"><?= $produto->nome?></p>
             <h5 class="card-title">R$ <?= $produto->preco?></h5>

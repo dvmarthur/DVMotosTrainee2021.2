@@ -35,8 +35,8 @@
         
         <div class="col-sm-7 colunaEsquerda">
           
-          <img class = "foto1 mt-2" src="../../../public/img/imagem_moto.jpeg" alt="Imagem Moto">
-          <img class = "foto2 mt-4 mb-4" src="../../../public/img/imagem_moto_2.jpeg" alt="Imagem Moto">
+          <img class = "foto1 mt-2" src="../../public/produtos/<?= $produtos[0]->imagem?>" alt="Imagem Moto">
+          <!-- <img class = "foto2 mt-4 mb-4" src="../../../public/img/imagem_moto_2.jpeg" alt="Imagem Moto"> -->
         </div>
         
         <div class="col-sm-5 mt-2 colunaDireita">
@@ -50,10 +50,7 @@
                 
             <h5 class="mt-5 mb-3">Descrição:</h5>
             <div class="descricao mb-4">
-              <p>Esta é a motocicleta certa para quem busca o estilo icônico de uma Harley Davidson e o ronco do V-Twin.</p>
-              <p>Potência de peso médio combinada com dirigibilidade de precisão.</p>
-              <p>Motor V-Twin Evolution de 883 cm³ refrigerado a ar.</p>
-              <p>Estilo Harley-Davidson autêntico em todos os detalhes, esbanjando força. O motor Evolution® de 883 cm3 com suportes de borracha oferece força e leveza por milhares de quilômetros. Você vai se preocupar apenas em aproveitar a liberdade das avenidas e ruas.</p>
+              <?= $produtos[0]->descricao?>
             </div>
         </div>
       </div>

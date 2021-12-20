@@ -75,7 +75,7 @@
             <?php foreach ($produtos_paginacao as $produto) : ?>
             <div class="col-sm my-3 d-flex justify-content-center">
               <div class="card" style="width: 18rem;">
-                <img src="../../../public/img/img_card.jpg" class="card-img-top" alt="Produto">
+                <img src="../../public/produtos/<?= $produto->imagem?>" class="card-img-top" alt="Produto">
                 <div class="card-body">
                   <h4 class="card-text"><a class="link-categoria" href="#"><?= $produto->categoria?></a></h4>
                   <p class="card-text"><a class="link-produto" href="#"><?= $produto->nome?></a></p>

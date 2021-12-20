@@ -104,7 +104,7 @@
         <!-- fim da tabela de produtos -->
 
       <!-- paginação -->
-      <nav aria-label="Page navigation example">
+      <!-- <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
           <li class="page-item">
             <a class="page-link link-pagina" href="#" aria-label="Previous">
@@ -122,7 +122,7 @@
             </a>
           </li>
         </ul>
-      </nav>
+      </nav> -->
       <!-- fim da paginação -->
     </main>
 

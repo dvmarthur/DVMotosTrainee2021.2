@@ -8,7 +8,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <form action="/produtos/create" method="POST" enctype="multipart/form-data">
+        <form action="/produtos/create" method="POST">
           <div class="modal-body">
             <!--Form Modal Adicionar-->
             <div class = "formularioAdicionar">
@@ -26,12 +26,15 @@
                 <?php endforeach; ?>
               </select>
               <br>
+
               <div class="form-group">
                 <label for="form-imagem"><h5>Imagem</h5></label>
-                <input type="file" class="form-control-file" id="form-imagem" name="imagem">
+                <input type="file" name="imagem" class="form-control-file" id="form-imagem">
               </div>
+
             </div>
           </div>
+
           <div class="modal-footer">
             <button type="submit" class="btn btn-warning btn-amarelo">Salvar</button>
             <button type="button" class="btn btn-warning btn-preto" data-dismiss="modal">Fechar</button>

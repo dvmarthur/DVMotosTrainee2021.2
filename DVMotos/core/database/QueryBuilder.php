@@ -45,31 +45,31 @@ class QueryBuilder
     }
 
     public function insertProduto($table, $parametros)
-    {
+    { 
+        // $sql = sprintf(
+        //     'insert into %s (%s) values(%s)',
+        //     $table,
+        //     implode(', ', array_keys($parametros)),
+        //     ':'. implode(', :', array_keys($parametros))
+        // );
 
-        $imagem = $_FILES['imagem'];
+        // try {
+        //     $stmt = $this->pdo->prepare($sql);
 
-        if($imagem != NULL) {
-            $nomeFinal = time().'.jpg';
-            if (move_uploaded_file($imagem['tmp_name'], $nomeFinal)) {
-                $tamanhoImg = filesize($nomeFinal);
-        
-                $mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
+        //     $stmt->execute($parametros);
 
-                $sql = "INSERT INTO `{$table}` (nome, categoria, descricao, preco, imagem) 
+        // } catch (Exception $e) {
+        //     die($e->getMessage());
+        // }
+
+        $sql = "INSERT INTO `{$table}` (nome, categoria, descricao, preco, imagem) 
                 values (    '{$parametros['nome']}',
                             '{$parametros['categoria']}',
                             '{$parametros['descricao']}',
                             '{$parametros['preco']}',
-                            '$mysqlImg')";
+                            '{$parametros['imagem']}'
+                        )";
 
-                unlink($nomeFinal);
-            }
-        }
-        else {
-            echo"Você não realizou o upload de forma satisfatória.";
-        }
-        
         try {
             $stmt = $this->pdo->prepare($sql);
 
