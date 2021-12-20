@@ -15,7 +15,7 @@ class ContatoController
 
     public function sendEmail()
     {
-        require 'vendor/autoload.php';
+        // require 'vendor/autoload.php';
 
         //die(var_dump($_POST));
 
@@ -40,7 +40,7 @@ class ContatoController
         $mail->Port = 587;
 
         $mail->setFrom($email, $nome);
-        $mail->addReplyTo($email);
+        // $mail->addReplyTo($email);
 
         $mail->addAddress('dvmotostore@gmail.com');
 

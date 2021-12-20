@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20-Dez-2021 às 03:53
+-- Tempo de geração: 20-Dez-2021 às 04:31
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 7.4.26
 
@@ -64,7 +64,13 @@ CREATE TABLE `produtos` (
 INSERT INTO `produtos` (`id`, `nome`, `descricao`, `preco`, `imagem`, `categoria`) VALUES
 (9, 'Batpod', 'Após o proprietário anterior que não quis revelar a identidade declarar falência, confiou apenas na DVMotos para revender a moto do cavaleiro das trevas.', 5000000.00, 'moto-1.jpg', 'Custom'),
 (12, 'Jet Ski', 'Os carros são como as lanchas, as motos são como os jet skis e os pedestres são como os banhistas...', 22545.99, 'moto-2.jpg', 'Custom'),
-(13, 'Lambreta Rosa', 'Está se sentindo \"careta\"? Compre uma Lambreta e resolva essa treta.', 10000.00, 'moto-3.jpg', 'Street');
+(13, 'Lambreta Rosa', 'Está se sentindo \"careta\"? Compre uma Lambreta e resolva essa treta.', 10000.00, 'moto-3.jpg', 'Street'),
+(15, 'Moto do Motoqueiro Fantasma', 'Por apenas uma baixa quantia em dinheiro e um pacto com o capiroto, se torne o motoqueiro fantasma e revele seu nicolas cagezinho interior', 666.50, 'moto-4.jpg', 'Street'),
+(16, 'Moto comum', 'Uma moto comum.', 15000.00, 'moto-5.jpg', 'Street'),
+(17, 'Moto comum (feia)', 'Uma moto comum mais feia que a outra.', 14000.00, 'moto-6.jpg', 'Street'),
+(18, 'Quadriciclo', 'Se você acha que duas rodas não é o suficiente, essa moto tem quatro oh.', 61000.00, 'moto-7.jpg', 'Custom'),
+(19, 'Velotrol do Homem-Aranha', 'Com grandes poderes vem grandes responsabilidades, por isso ao adquirir essa poderosa motocicleta, não esqueça o capacete. Nanotecnologia Stark.', 5000001.00, 'moto-8.jpg', 'Custom'),
+(20, 'Moto comum (azul)', 'Uma moto comum, só que mais azul (e amarela) que a outra.', 16000.00, 'moto-9.jpg', 'Street');
 
 -- --------------------------------------------------------
 
@@ -123,7 +129,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `users`
